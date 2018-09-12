@@ -50,7 +50,7 @@ export default class SimpleClient {
     );
   }
 
-  performPaymentPostAuthorizationByOrder(orderId, payload, opts) {
+  performPaymentPostAuthorizationByOrder(orderId, payload, storeId) {
     let clientRequestId = genClientRequestId();
     let timestamp = genTimestamp();
     let messageSignature = genMessageSignature(
@@ -68,11 +68,11 @@ export default class SimpleClient {
       messageSignature,
       orderId,
       payload,
-      opts
+      { storeId }
     );
   }
 
-  returnTransactionByOrder(orderId, payload, opts) {
+  returnTransactionByOrder(orderId, payload, storeId) {
     let clientRequestId = genClientRequestId();
     let timestamp = genTimestamp();
     let messageSignature = genMessageSignature(
@@ -90,11 +90,11 @@ export default class SimpleClient {
       messageSignature,
       orderId,
       payload,
-      opts
+      { storeId }
     );
   }
 
-  performPaymentPostAuthorizationByTransaction(transactionId, payload, opts) {
+  performPaymentPostAuthorizationByTransaction(transactionId, payload, storeId) {
     let clientRequestId = genClientRequestId();
     let timestamp = genTimestamp();
     let messageSignature = genMessageSignature(
@@ -112,7 +112,7 @@ export default class SimpleClient {
       messageSignature,
       transactionId,
       payload,
-      opts
+      { storeId }
     );
   }
 
@@ -136,7 +136,7 @@ export default class SimpleClient {
     );
   }
 
-  returnTransaction(transactionId, payload, opts) {
+  returnTransaction(transactionId, payload, storeId) {
     let clientRequestId = genClientRequestId();
     let timestamp = genTimestamp();
     let messageSignature = genMessageSignature(
@@ -154,11 +154,11 @@ export default class SimpleClient {
       messageSignature,
       transactionId,
       payload,
-      opts
+      { storeId }
     );
   }
 
-  transactionInquiry(transactionId, opts) {
+  transactionInquiry(transactionId, storeId) {
     let clientRequestId = genClientRequestId();
     let timestamp = genTimestamp();
     let messageSignature = genMessageSignature(
@@ -174,11 +174,11 @@ export default class SimpleClient {
       timestamp,
       messageSignature,
       transactionId,
-      opts
+      { storeId }
     );
   }
 
-  voidTransaction(transactionId, opts) {
+  voidTransaction(transactionId, storeId) {
     let clientRequestId = genClientRequestId();
     let timestamp = genTimestamp();
     let messageSignature = genMessageSignature(
@@ -194,7 +194,7 @@ export default class SimpleClient {
       timestamp,
       messageSignature,
       transactionId,
-      opts
+      { storeId }
     );
   }
 }
