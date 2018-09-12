@@ -1,17 +1,17 @@
-# SimpleApi
+# SimpleClient
 
 All URIs are relative to *https://cert.api.firstdata.com/gateway*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**requestAccessToken**](SimpleApi.md#requestAccessToken) | **POST** /v1/authentication/access-tokens | Generate an access token for user authentication
-[**performPaymentPostAuthorisationByTransaction**](SimpleApi.md#performPaymentPostAuthorisationByTransaction) | **POST** /v1/payments/{transaction-id}/postauth | Use this to capture/complete a transaction. Partial postauths are allowed.
-[**primaryPaymentTransaction**](SimpleApi.md#primaryPaymentTransaction) | **POST** /v1/payments | Generate a primary transaction
-[**returnTransaction**](SimpleApi.md#returnTransaction) | **POST** /v1/payments/{transaction-id}/return | Return/refund a transaction.
-[**transactionInquiry**](SimpleApi.md#transactionInquiry) | **GET** /v1/payments/{transaction-id} | Retrieve the state of a transaction
-[**voidTransaction**](SimpleApi.md#voidTransaction) | **POST** /v1/payments/{transaction-id}/void | Reverse a previous action on an existing transaction
-[**performPaymentPostAuthorisationByOrder**](SimpleApi.md#performPaymentPostAuthorisationByOrder) | **POST** /v1/orders/{order-id}/postauth | Use this to capture/complete a transaction. Partial postauths are allowed.
-[**returnTransactionByOrder**](SimpleApi.md#returnTransactionByOrder) | **POST** /v1/orders/{order-id}/return | Use this to return/refund on the order. Partial returns are allowed.
+[**requestAccessToken**](SimpleClient.md#requestAccessToken) | **POST** /v1/authentication/access-tokens | Generate an access token for user authentication
+[**performPaymentPostAuthorisationByTransaction**](SimpleClient.md#performPaymentPostAuthorisationByTransaction) | **POST** /v1/payments/{transaction-id}/postauth | Use this to capture/complete a transaction. Partial postauths are allowed.
+[**primaryPaymentTransaction**](SimpleClient.md#primaryPaymentTransaction) | **POST** /v1/payments | Generate a primary transaction
+[**returnTransaction**](SimpleClient.md#returnTransaction) | **POST** /v1/payments/{transaction-id}/return | Return/refund a transaction.
+[**transactionInquiry**](SimpleClient.md#transactionInquiry) | **GET** /v1/payments/{transaction-id} | Retrieve the state of a transaction
+[**voidTransaction**](SimpleClient.md#voidTransaction) | **POST** /v1/payments/{transaction-id}/void | Reverse a previous action on an existing transaction
+[**performPaymentPostAuthorisationByOrder**](SimpleClient.md#performPaymentPostAuthorisationByOrder) | **POST** /v1/orders/{order-id}/postauth | Use this to capture/complete a transaction. Partial postauths are allowed.
+[**returnTransactionByOrder**](SimpleClient.md#returnTransactionByOrder) | **POST** /v1/orders/{order-id}/return | Use this to return/refund on the order. Partial returns are allowed.
 
 
 <a name="requestAccessToken"></a>
