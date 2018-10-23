@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.ClientLocale();
+    instance = new FirstDataGateway.ClientLocale();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('ClientLocale', function() {
     it('should create an instance of ClientLocale', function() {
       // uncomment below and update the code to test ClientLocale
-      //var instane = new FirstApiSdk.ClientLocale();
-      //expect(instance).to.be.a(FirstApiSdk.ClientLocale);
+      //var instane = new FirstDataGateway.ClientLocale();
+      //expect(instance).to.be.a(FirstDataGateway.ClientLocale);
     });
 
     it('should have the property language (base name: "language")', function() {
       // uncomment below and update the code to test the property language
-      //var instane = new FirstApiSdk.ClientLocale();
+      //var instane = new FirstDataGateway.ClientLocale();
       //expect(instance).to.be();
     });
 
     it('should have the property country (base name: "country")', function() {
       // uncomment below and update the code to test the property country
-      //var instane = new FirstApiSdk.ClientLocale();
+      //var instane = new FirstDataGateway.ClientLocale();
       //expect(instance).to.be();
     });
 

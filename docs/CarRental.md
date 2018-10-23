@@ -1,4 +1,4 @@
-# FirstApiSdk.CarRental
+# FirstDataGateway.CarRental
 
 ## Properties
 Name | Type | Description | Notes

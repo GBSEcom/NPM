@@ -1,4 +1,4 @@
-# FirstApiSdk.StoredCredential
+# FirstDataGateway.StoredCredential
 
 ## Properties
 Name | Type | Description | Notes

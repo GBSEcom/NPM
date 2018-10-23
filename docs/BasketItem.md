@@ -1,4 +1,4 @@
-# FirstApiSdk.BasketItem
+# FirstDataGateway.BasketItem
 
 ## Properties
 Name | Type | Description | Notes

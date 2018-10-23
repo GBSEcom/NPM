@@ -1,4 +1,4 @@
-# FirstApiSdk.TransactionResponseAuthenticationRedirect
+# FirstDataGateway.TransactionResponseAuthenticationRedirect
 
 ## Properties
 Name | Type | Description | Notes

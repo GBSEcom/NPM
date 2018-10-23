@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.ErrorDetails();
+    instance = new FirstDataGateway.ErrorDetails();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('ErrorDetails', function() {
     it('should create an instance of ErrorDetails', function() {
       // uncomment below and update the code to test ErrorDetails
-      //var instane = new FirstApiSdk.ErrorDetails();
-      //expect(instance).to.be.a(FirstApiSdk.ErrorDetails);
+      //var instane = new FirstDataGateway.ErrorDetails();
+      //expect(instance).to.be.a(FirstDataGateway.ErrorDetails);
     });
 
     it('should have the property field (base name: "field")', function() {
       // uncomment below and update the code to test the property field
-      //var instane = new FirstApiSdk.ErrorDetails();
+      //var instane = new FirstDataGateway.ErrorDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property message (base name: "message")', function() {
       // uncomment below and update the code to test the property message
-      //var instane = new FirstApiSdk.ErrorDetails();
+      //var instane = new FirstDataGateway.ErrorDetails();
       //expect(instance).to.be();
     });
 

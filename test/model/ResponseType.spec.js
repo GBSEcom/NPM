@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
@@ -51,8 +51,8 @@
   describe('ResponseType', function() {
     it('should create an instance of ResponseType', function() {
       // uncomment below and update the code to test ResponseType
-      //var instane = new FirstApiSdk.ResponseType();
-      //expect(instance).to.be.a(FirstApiSdk.ResponseType);
+      //var instane = new FirstDataGateway.ResponseType();
+      //expect(instance).to.be.a(FirstDataGateway.ResponseType);
     });
 
   });

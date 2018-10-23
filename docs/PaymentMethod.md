@@ -1,4 +1,4 @@
-# FirstApiSdk.PaymentMethod
+# FirstDataGateway.PaymentMethod
 
 ## Properties
 Name | Type | Description | Notes

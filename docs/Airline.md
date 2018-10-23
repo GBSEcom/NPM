@@ -1,4 +1,4 @@
-# FirstApiSdk.Airline
+# FirstDataGateway.Airline
 
 ## Properties
 Name | Type | Description | Notes

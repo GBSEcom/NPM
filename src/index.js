@@ -25,14 +25,14 @@
   'use strict';
 
   /**
-   * Payment Gateway API SDK for payment processing.<br>
+   * First Data Gateway RESTFUL API JavaScript SDK.<br>
    * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
    * <pre>
-   * var FirstApiSdk = require('index'); // See note below*.
-   * var xxxSvc = new FirstApiSdk.XxxApi(); // Allocate the API class we're going to use.
-   * var yyyModel = new FirstApiSdk.Yyy(); // Construct a model instance.
+   * var FirstDataGateway = require('index'); // See note below*.
+   * var xxxSvc = new FirstDataGateway.XxxApi(); // Allocate the API class we're going to use.
+   * var yyyModel = new FirstDataGateway.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -44,8 +44,8 @@
    * <p>
    * A non-AMD browser application (discouraged) might do something like this:
    * <pre>
-   * var xxxSvc = new FirstApiSdk.XxxApi(); // Allocate the API class we're going to use.
-   * var yyy = new FirstApiSdk.Yyy(); // Construct a model instance.
+   * var xxxSvc = new FirstDataGateway.XxxApi(); // Allocate the API class we're going to use.
+   * var yyy = new FirstDataGateway.Yyy(); // Construct a model instance.
    * yyyModel.someProperty = 'someValue';
    * ...
    * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -53,7 +53,7 @@
    * </pre>
    * </p>
    * @module index
-   * @version 6.3.0
+   * @version 1.0.0
    */
   var exports = {
     /**

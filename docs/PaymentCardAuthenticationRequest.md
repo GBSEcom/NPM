@@ -1,4 +1,4 @@
-# FirstApiSdk.PaymentCardAuthenticationRequest
+# FirstDataGateway.PaymentCardAuthenticationRequest
 
 ## Properties
 Name | Type | Description | Notes

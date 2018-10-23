@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.PrimaryTransactionAdditionalDetails();
+    instance = new FirstDataGateway.PrimaryTransactionAdditionalDetails();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,49 +52,49 @@
   describe('PrimaryTransactionAdditionalDetails', function() {
     it('should create an instance of PrimaryTransactionAdditionalDetails', function() {
       // uncomment below and update the code to test PrimaryTransactionAdditionalDetails
-      //var instane = new FirstApiSdk.PrimaryTransactionAdditionalDetails();
-      //expect(instance).to.be.a(FirstApiSdk.PrimaryTransactionAdditionalDetails);
+      //var instane = new FirstDataGateway.PrimaryTransactionAdditionalDetails();
+      //expect(instance).to.be.a(FirstDataGateway.PrimaryTransactionAdditionalDetails);
     });
 
     it('should have the property referenceNumber (base name: "referenceNumber")', function() {
       // uncomment below and update the code to test the property referenceNumber
-      //var instane = new FirstApiSdk.PrimaryTransactionAdditionalDetails();
+      //var instane = new FirstDataGateway.PrimaryTransactionAdditionalDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property comments (base name: "comments")', function() {
       // uncomment below and update the code to test the property comments
-      //var instane = new FirstApiSdk.PrimaryTransactionAdditionalDetails();
+      //var instane = new FirstDataGateway.PrimaryTransactionAdditionalDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property dynamicMerchantName (base name: "dynamicMerchantName")', function() {
       // uncomment below and update the code to test the property dynamicMerchantName
-      //var instane = new FirstApiSdk.PrimaryTransactionAdditionalDetails();
+      //var instane = new FirstDataGateway.PrimaryTransactionAdditionalDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property invoiceNumber (base name: "invoiceNumber")', function() {
       // uncomment below and update the code to test the property invoiceNumber
-      //var instane = new FirstApiSdk.PrimaryTransactionAdditionalDetails();
+      //var instane = new FirstDataGateway.PrimaryTransactionAdditionalDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property purchaseOrderNumber (base name: "purchaseOrderNumber")', function() {
       // uncomment below and update the code to test the property purchaseOrderNumber
-      //var instane = new FirstApiSdk.PrimaryTransactionAdditionalDetails();
+      //var instane = new FirstDataGateway.PrimaryTransactionAdditionalDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property recurringType (base name: "recurringType")', function() {
       // uncomment below and update the code to test the property recurringType
-      //var instane = new FirstApiSdk.PrimaryTransactionAdditionalDetails();
+      //var instane = new FirstDataGateway.PrimaryTransactionAdditionalDetails();
       //expect(instance).to.be();
     });
 
     it('should have the property installmentOptions (base name: "installmentOptions")', function() {
       // uncomment below and update the code to test the property installmentOptions
-      //var instane = new FirstApiSdk.PrimaryTransactionAdditionalDetails();
+      //var instane = new FirstDataGateway.PrimaryTransactionAdditionalDetails();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# FirstApiSdk.Amount
+# FirstDataGateway.Amount
 
 ## Properties
 Name | Type | Description | Notes

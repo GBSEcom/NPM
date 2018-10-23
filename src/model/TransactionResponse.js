@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Amount'), require('./ProcessorData'), require('./ResponseType'), require('./TransactionResponseAuthenticationRedirect'), require('./TransactionType'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.TransactionResponse = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.Amount, root.FirstApiSdk.ProcessorData, root.FirstApiSdk.ResponseType, root.FirstApiSdk.TransactionResponseAuthenticationRedirect, root.FirstApiSdk.TransactionType);
+    root.FirstDataGateway.TransactionResponse = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.Amount, root.FirstDataGateway.ProcessorData, root.FirstDataGateway.ResponseType, root.FirstDataGateway.TransactionResponseAuthenticationRedirect, root.FirstDataGateway.TransactionType);
   }
 }(this, function(ApiClient, Amount, ProcessorData, ResponseType, TransactionResponseAuthenticationRedirect, TransactionType) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The TransactionResponse model module.
    * @module model/TransactionResponse
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

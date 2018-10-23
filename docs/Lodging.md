@@ -1,4 +1,4 @@
-# FirstApiSdk.Lodging
+# FirstDataGateway.Lodging
 
 ## Properties
 Name | Type | Description | Notes

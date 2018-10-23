@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.Address();
+    instance = new FirstDataGateway.Address();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,49 +52,49 @@
   describe('Address', function() {
     it('should create an instance of Address', function() {
       // uncomment below and update the code to test Address
-      //var instane = new FirstApiSdk.Address();
-      //expect(instance).to.be.a(FirstApiSdk.Address);
+      //var instane = new FirstDataGateway.Address();
+      //expect(instance).to.be.a(FirstDataGateway.Address);
     });
 
     it('should have the property company (base name: "company")', function() {
       // uncomment below and update the code to test the property company
-      //var instane = new FirstApiSdk.Address();
+      //var instane = new FirstDataGateway.Address();
       //expect(instance).to.be();
     });
 
     it('should have the property address1 (base name: "address1")', function() {
       // uncomment below and update the code to test the property address1
-      //var instane = new FirstApiSdk.Address();
+      //var instane = new FirstDataGateway.Address();
       //expect(instance).to.be();
     });
 
     it('should have the property address2 (base name: "address2")', function() {
       // uncomment below and update the code to test the property address2
-      //var instane = new FirstApiSdk.Address();
+      //var instane = new FirstDataGateway.Address();
       //expect(instance).to.be();
     });
 
     it('should have the property city (base name: "city")', function() {
       // uncomment below and update the code to test the property city
-      //var instane = new FirstApiSdk.Address();
+      //var instane = new FirstDataGateway.Address();
       //expect(instance).to.be();
     });
 
     it('should have the property region (base name: "region")', function() {
       // uncomment below and update the code to test the property region
-      //var instane = new FirstApiSdk.Address();
+      //var instane = new FirstDataGateway.Address();
       //expect(instance).to.be();
     });
 
     it('should have the property postalCode (base name: "postalCode")', function() {
       // uncomment below and update the code to test the property postalCode
-      //var instane = new FirstApiSdk.Address();
+      //var instane = new FirstDataGateway.Address();
       //expect(instance).to.be();
     });
 
     it('should have the property country (base name: "country")', function() {
       // uncomment below and update the code to test the property country
-      //var instane = new FirstApiSdk.Address();
+      //var instane = new FirstDataGateway.Address();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# FirstApiSdk.PaymentApi
+# FirstDataGateway.PaymentApi
 
 All URIs are relative to *https://cert.api.firstdata.com/gateway*
 
@@ -21,9 +21,9 @@ This can be used for postauth and partial postauths.
 
 ### Example
 ```javascript
-var FirstApiSdk = require('FirstApiSDK');
+var FirstDataGateway = require('FirstDataGateway');
 
-var apiInstance = new FirstApiSdk.PaymentApi();
+var apiInstance = new FirstDataGateway.PaymentApi();
 
 var contentType = "application/json"; // String | content type
 
@@ -37,7 +37,7 @@ var messageSignature = "messageSignature_example"; // String | Used to ensure th
 
 var transactionId = "transactionId_example"; // String | Gateway transaction identifier as returned in the parameter ipgTransactionId
 
-var payload = new FirstApiSdk.SecondaryTransaction(); // SecondaryTransaction | 
+var payload = new FirstDataGateway.SecondaryTransaction(); // SecondaryTransaction | 
 
 var opts = { 
   'storeId': "storeId_example" // String | an optional outlet id for clients that support multiple store in the same developer app
@@ -86,9 +86,9 @@ Use this to originate a financial transaction, like a sale, preauthorization, or
 
 ### Example
 ```javascript
-var FirstApiSdk = require('FirstApiSDK');
+var FirstDataGateway = require('FirstDataGateway');
 
-var apiInstance = new FirstApiSdk.PaymentApi();
+var apiInstance = new FirstDataGateway.PaymentApi();
 
 var contentType = "application/json"; // String | content type
 
@@ -100,7 +100,7 @@ var timestamp = 789; // Number | Epoch timestamp in milliseconds in the request 
 
 var messageSignature = "messageSignature_example"; // String | Used to ensure the request has not been tampered with during transmission. The Message-Signature is the Base64 encoded HMAC hash (SHA256  algorithm with the API Secret as the key.) For more information, refer to the supporting documentation on the Developer Portal.
 
-var payload = new FirstApiSdk.PrimaryTransaction(); // PrimaryTransaction | Primary Transaction request
+var payload = new FirstDataGateway.PrimaryTransaction(); // PrimaryTransaction | Primary Transaction request
 
 apiInstance.primaryPaymentTransaction(contentType, clientRequestId, apiKey, timestamp, messageSignature, payload).then(function(data) {
   console.log('API called successfully. Returned data: ' + data);
@@ -144,9 +144,9 @@ Use this to return/refund an existing transaction.  Partial returns are allowed.
 
 ### Example
 ```javascript
-var FirstApiSdk = require('FirstApiSDK');
+var FirstDataGateway = require('FirstDataGateway');
 
-var apiInstance = new FirstApiSdk.PaymentApi();
+var apiInstance = new FirstDataGateway.PaymentApi();
 
 var contentType = "application/json"; // String | content type
 
@@ -160,7 +160,7 @@ var messageSignature = "messageSignature_example"; // String | Used to ensure th
 
 var transactionId = "transactionId_example"; // String | Gateway transaction identifier as returned in the parameter ipgTransactionId
 
-var payload = new FirstApiSdk.SecondaryTransaction(); // SecondaryTransaction | 
+var payload = new FirstDataGateway.SecondaryTransaction(); // SecondaryTransaction | 
 
 var opts = { 
   'storeId': "storeId_example" // String | an optional outlet id for clients that support multiple store in the same developer app
@@ -209,9 +209,9 @@ Use this query to get the current state of an existing transaction.
 
 ### Example
 ```javascript
-var FirstApiSdk = require('FirstApiSDK');
+var FirstDataGateway = require('FirstDataGateway');
 
-var apiInstance = new FirstApiSdk.PaymentApi();
+var apiInstance = new FirstDataGateway.PaymentApi();
 
 var contentType = "application/json"; // String | content type
 
@@ -271,9 +271,9 @@ Use this to reverse a postauth/completion, credit, preauth, or sale.
 
 ### Example
 ```javascript
-var FirstApiSdk = require('FirstApiSDK');
+var FirstDataGateway = require('FirstDataGateway');
 
-var apiInstance = new FirstApiSdk.PaymentApi();
+var apiInstance = new FirstDataGateway.PaymentApi();
 
 var contentType = "application/json"; // String | content type
 

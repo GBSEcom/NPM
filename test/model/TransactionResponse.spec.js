@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.TransactionResponse();
+    instance = new FirstDataGateway.TransactionResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,127 +52,127 @@
   describe('TransactionResponse', function() {
     it('should create an instance of TransactionResponse', function() {
       // uncomment below and update the code to test TransactionResponse
-      //var instane = new FirstApiSdk.TransactionResponse();
-      //expect(instance).to.be.a(FirstApiSdk.TransactionResponse);
+      //var instane = new FirstDataGateway.TransactionResponse();
+      //expect(instance).to.be.a(FirstDataGateway.TransactionResponse);
     });
 
     it('should have the property responseType (base name: "responseType")', function() {
       // uncomment below and update the code to test the property responseType
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property clientRequestId (base name: "clientRequestId")', function() {
       // uncomment below and update the code to test the property clientRequestId
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property apiTraceId (base name: "apiTraceId")', function() {
       // uncomment below and update the code to test the property apiTraceId
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property ipgTransactionId (base name: "ipgTransactionId")', function() {
       // uncomment below and update the code to test the property ipgTransactionId
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property orderId (base name: "orderId")', function() {
       // uncomment below and update the code to test the property orderId
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property transactionType (base name: "transactionType")', function() {
       // uncomment below and update the code to test the property transactionType
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property authorizationCode (base name: "authorizationCode")', function() {
       // uncomment below and update the code to test the property authorizationCode
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property avsResponse (base name: "avsResponse")', function() {
       // uncomment below and update the code to test the property avsResponse
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property securityCodeResponse (base name: "securityCodeResponse")', function() {
       // uncomment below and update the code to test the property securityCodeResponse
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property brand (base name: "brand")', function() {
       // uncomment below and update the code to test the property brand
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property country (base name: "country")', function() {
       // uncomment below and update the code to test the property country
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property terminalId (base name: "terminalId")', function() {
       // uncomment below and update the code to test the property terminalId
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property clientTransactionId (base name: "clientTransactionId")', function() {
       // uncomment below and update the code to test the property clientTransactionId
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property transactionTime (base name: "transactionTime")', function() {
       // uncomment below and update the code to test the property transactionTime
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property approvedAmount (base name: "approvedAmount")', function() {
       // uncomment below and update the code to test the property approvedAmount
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property transactionStatus (base name: "transactionStatus")', function() {
       // uncomment below and update the code to test the property transactionStatus
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property transactionState (base name: "transactionState")', function() {
       // uncomment below and update the code to test the property transactionState
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property authenticationRedirect (base name: "authenticationRedirect")', function() {
       // uncomment below and update the code to test the property authenticationRedirect
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property schemeTransactionId (base name: "schemeTransactionId")', function() {
       // uncomment below and update the code to test the property schemeTransactionId
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property processor (base name: "processor")', function() {
       // uncomment below and update the code to test the property processor
-      //var instane = new FirstApiSdk.TransactionResponse();
+      //var instane = new FirstDataGateway.TransactionResponse();
       //expect(instance).to.be();
     });
 

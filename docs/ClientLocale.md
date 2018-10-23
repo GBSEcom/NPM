@@ -1,4 +1,4 @@
-# FirstApiSdk.ClientLocale
+# FirstDataGateway.ClientLocale
 
 ## Properties
 Name | Type | Description | Notes

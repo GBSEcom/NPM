@@ -1,4 +1,4 @@
-# FirstApiSdk.SecondaryTransaction
+# FirstDataGateway.SecondaryTransaction
 
 ## Properties
 Name | Type | Description | Notes

@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Billing'), require('./Shipping'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.Order = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.Billing, root.FirstApiSdk.Shipping);
+    root.FirstDataGateway.Order = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.Billing, root.FirstDataGateway.Shipping);
   }
 }(this, function(ApiClient, Billing, Shipping) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The Order model module.
    * @module model/Order
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

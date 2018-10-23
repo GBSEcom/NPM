@@ -1,4 +1,4 @@
-# FirstApiSdk.ProcessorData
+# FirstDataGateway.ProcessorData
 
 ## Properties
 Name | Type | Description | Notes

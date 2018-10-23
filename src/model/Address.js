@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.Address = factory(root.FirstApiSdk.ApiClient);
+    root.FirstDataGateway.Address = factory(root.FirstDataGateway.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The Address model module.
    * @module model/Address
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

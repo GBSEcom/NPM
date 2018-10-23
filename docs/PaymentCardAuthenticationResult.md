@@ -1,4 +1,4 @@
-# FirstApiSdk.PaymentCardAuthenticationResult
+# FirstDataGateway.PaymentCardAuthenticationResult
 
 ## Properties
 Name | Type | Description | Notes

@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./SepaMandate'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.Sepa = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.SepaMandate);
+    root.FirstDataGateway.Sepa = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.SepaMandate);
   }
 }(this, function(ApiClient, SepaMandate) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The Sepa model module.
    * @module model/Sepa
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

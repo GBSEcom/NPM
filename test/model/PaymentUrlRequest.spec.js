@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.PaymentUrlRequest();
+    instance = new FirstDataGateway.PaymentUrlRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,31 +52,31 @@
   describe('PaymentUrlRequest', function() {
     it('should create an instance of PaymentUrlRequest', function() {
       // uncomment below and update the code to test PaymentUrlRequest
-      //var instane = new FirstApiSdk.PaymentUrlRequest();
-      //expect(instance).to.be.a(FirstApiSdk.PaymentUrlRequest);
+      //var instane = new FirstDataGateway.PaymentUrlRequest();
+      //expect(instance).to.be.a(FirstDataGateway.PaymentUrlRequest);
     });
 
     it('should have the property storeId (base name: "storeId")', function() {
       // uncomment below and update the code to test the property storeId
-      //var instane = new FirstApiSdk.PaymentUrlRequest();
+      //var instane = new FirstDataGateway.PaymentUrlRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property clientLocale (base name: "clientLocale")', function() {
       // uncomment below and update the code to test the property clientLocale
-      //var instane = new FirstApiSdk.PaymentUrlRequest();
+      //var instane = new FirstDataGateway.PaymentUrlRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property amount (base name: "amount")', function() {
       // uncomment below and update the code to test the property amount
-      //var instane = new FirstApiSdk.PaymentUrlRequest();
+      //var instane = new FirstDataGateway.PaymentUrlRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property orderId (base name: "orderId")', function() {
       // uncomment below and update the code to test the property orderId
-      //var instane = new FirstApiSdk.PaymentUrlRequest();
+      //var instane = new FirstDataGateway.PaymentUrlRequest();
       //expect(instance).to.be();
     });
 

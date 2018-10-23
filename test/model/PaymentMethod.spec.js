@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.PaymentMethod();
+    instance = new FirstDataGateway.PaymentMethod();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,31 +52,31 @@
   describe('PaymentMethod', function() {
     it('should create an instance of PaymentMethod', function() {
       // uncomment below and update the code to test PaymentMethod
-      //var instane = new FirstApiSdk.PaymentMethod();
-      //expect(instance).to.be.a(FirstApiSdk.PaymentMethod);
+      //var instane = new FirstDataGateway.PaymentMethod();
+      //expect(instance).to.be.a(FirstDataGateway.PaymentMethod);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new FirstApiSdk.PaymentMethod();
+      //var instane = new FirstDataGateway.PaymentMethod();
       //expect(instance).to.be();
     });
 
     it('should have the property paymentCard (base name: "paymentCard")', function() {
       // uncomment below and update the code to test the property paymentCard
-      //var instane = new FirstApiSdk.PaymentMethod();
+      //var instane = new FirstDataGateway.PaymentMethod();
       //expect(instance).to.be();
     });
 
     it('should have the property sepa (base name: "sepa")', function() {
       // uncomment below and update the code to test the property sepa
-      //var instane = new FirstApiSdk.PaymentMethod();
+      //var instane = new FirstDataGateway.PaymentMethod();
       //expect(instance).to.be();
     });
 
     it('should have the property payPal (base name: "payPal")', function() {
       // uncomment below and update the code to test the property payPal
-      //var instane = new FirstApiSdk.PaymentMethod();
+      //var instane = new FirstDataGateway.PaymentMethod();
       //expect(instance).to.be();
     });
 

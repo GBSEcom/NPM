@@ -1,4 +1,4 @@
-# FirstApiSdk.PaymentSchedulesRequest
+# FirstDataGateway.PaymentSchedulesRequest
 
 ## Properties
 Name | Type | Description | Notes

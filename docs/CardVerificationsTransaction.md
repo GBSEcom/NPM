@@ -1,4 +1,4 @@
-# FirstApiSdk.CardVerificationsTransaction
+# FirstDataGateway.CardVerificationsTransaction
 
 ## Properties
 Name | Type | Description | Notes

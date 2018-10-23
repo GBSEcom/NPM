@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.TransactionType = factory(root.FirstApiSdk.ApiClient);
+    root.FirstDataGateway.TransactionType = factory(root.FirstDataGateway.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';

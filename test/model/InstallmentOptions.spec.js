@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.InstallmentOptions();
+    instance = new FirstDataGateway.InstallmentOptions();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('InstallmentOptions', function() {
     it('should create an instance of InstallmentOptions', function() {
       // uncomment below and update the code to test InstallmentOptions
-      //var instane = new FirstApiSdk.InstallmentOptions();
-      //expect(instance).to.be.a(FirstApiSdk.InstallmentOptions);
+      //var instane = new FirstDataGateway.InstallmentOptions();
+      //expect(instance).to.be.a(FirstDataGateway.InstallmentOptions);
     });
 
     it('should have the property numberOfInstallments (base name: "numberOfInstallments")', function() {
       // uncomment below and update the code to test the property numberOfInstallments
-      //var instane = new FirstApiSdk.InstallmentOptions();
+      //var instane = new FirstDataGateway.InstallmentOptions();
       //expect(instance).to.be();
     });
 
     it('should have the property installmentsInterest (base name: "installmentsInterest")', function() {
       // uncomment below and update the code to test the property installmentsInterest
-      //var instane = new FirstApiSdk.InstallmentOptions();
+      //var instane = new FirstDataGateway.InstallmentOptions();
       //expect(instance).to.be();
     });
 
     it('should have the property installmentDelayMonths (base name: "installmentDelayMonths")', function() {
       // uncomment below and update the code to test the property installmentDelayMonths
-      //var instane = new FirstApiSdk.InstallmentOptions();
+      //var instane = new FirstDataGateway.InstallmentOptions();
       //expect(instance).to.be();
     });
 

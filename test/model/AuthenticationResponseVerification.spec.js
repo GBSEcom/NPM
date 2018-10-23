@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.AuthenticationResponseVerification();
+    instance = new FirstDataGateway.AuthenticationResponseVerification();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('AuthenticationResponseVerification', function() {
     it('should create an instance of AuthenticationResponseVerification', function() {
       // uncomment below and update the code to test AuthenticationResponseVerification
-      //var instane = new FirstApiSdk.AuthenticationResponseVerification();
-      //expect(instance).to.be.a(FirstApiSdk.AuthenticationResponseVerification);
+      //var instane = new FirstDataGateway.AuthenticationResponseVerification();
+      //expect(instance).to.be.a(FirstDataGateway.AuthenticationResponseVerification);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new FirstApiSdk.AuthenticationResponseVerification();
+      //var instane = new FirstDataGateway.AuthenticationResponseVerification();
       //expect(instance).to.be();
     });
 
     it('should have the property MD (base name: "MD")', function() {
       // uncomment below and update the code to test the property MD
-      //var instane = new FirstApiSdk.AuthenticationResponseVerification();
+      //var instane = new FirstDataGateway.AuthenticationResponseVerification();
       //expect(instance).to.be();
     });
 
     it('should have the property paRes (base name: "PaRes")', function() {
       // uncomment below and update the code to test the property paRes
-      //var instane = new FirstApiSdk.AuthenticationResponseVerification();
+      //var instane = new FirstDataGateway.AuthenticationResponseVerification();
       //expect(instance).to.be();
     });
 

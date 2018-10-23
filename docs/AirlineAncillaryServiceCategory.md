@@ -1,4 +1,4 @@
-# FirstApiSdk.AirlineAncillaryServiceCategory
+# FirstDataGateway.AirlineAncillaryServiceCategory
 
 ## Properties
 Name | Type | Description | Notes

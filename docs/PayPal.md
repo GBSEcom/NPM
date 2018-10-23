@@ -1,4 +1,4 @@
-# FirstApiSdk.PayPal
+# FirstDataGateway.PayPal
 
 ## Properties
 Name | Type | Description | Notes

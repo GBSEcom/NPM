@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Amount'), require('./ClientLocale'), require('./Frequency'), require('./PaymentMethod'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.PaymentSchedulesRequest = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.Amount, root.FirstApiSdk.ClientLocale, root.FirstApiSdk.Frequency, root.FirstApiSdk.PaymentMethod);
+    root.FirstDataGateway.PaymentSchedulesRequest = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.Amount, root.FirstDataGateway.ClientLocale, root.FirstDataGateway.Frequency, root.FirstDataGateway.PaymentMethod);
   }
 }(this, function(ApiClient, Amount, ClientLocale, Frequency, PaymentMethod) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The PaymentSchedulesRequest model module.
    * @module model/PaymentSchedulesRequest
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

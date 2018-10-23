@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.CarRentalExtraCharges();
+    instance = new FirstDataGateway.CarRentalExtraCharges();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,13 +52,13 @@
   describe('CarRentalExtraCharges', function() {
     it('should create an instance of CarRentalExtraCharges', function() {
       // uncomment below and update the code to test CarRentalExtraCharges
-      //var instane = new FirstApiSdk.CarRentalExtraCharges();
-      //expect(instance).to.be.a(FirstApiSdk.CarRentalExtraCharges);
+      //var instane = new FirstDataGateway.CarRentalExtraCharges();
+      //expect(instance).to.be.a(FirstDataGateway.CarRentalExtraCharges);
     });
 
     it('should have the property chargeItem (base name: "chargeItem")', function() {
       // uncomment below and update the code to test the property chargeItem
-      //var instane = new FirstApiSdk.CarRentalExtraCharges();
+      //var instane = new FirstDataGateway.CarRentalExtraCharges();
       //expect(instance).to.be();
     });
 

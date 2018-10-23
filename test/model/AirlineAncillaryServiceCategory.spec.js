@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.AirlineAncillaryServiceCategory();
+    instance = new FirstDataGateway.AirlineAncillaryServiceCategory();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,13 +52,13 @@
   describe('AirlineAncillaryServiceCategory', function() {
     it('should create an instance of AirlineAncillaryServiceCategory', function() {
       // uncomment below and update the code to test AirlineAncillaryServiceCategory
-      //var instane = new FirstApiSdk.AirlineAncillaryServiceCategory();
-      //expect(instance).to.be.a(FirstApiSdk.AirlineAncillaryServiceCategory);
+      //var instane = new FirstDataGateway.AirlineAncillaryServiceCategory();
+      //expect(instance).to.be.a(FirstDataGateway.AirlineAncillaryServiceCategory);
     });
 
     it('should have the property serviceCategory (base name: "serviceCategory")', function() {
       // uncomment below and update the code to test the property serviceCategory
-      //var instane = new FirstApiSdk.AirlineAncillaryServiceCategory();
+      //var instane = new FirstDataGateway.AirlineAncillaryServiceCategory();
       //expect(instance).to.be();
     });
 

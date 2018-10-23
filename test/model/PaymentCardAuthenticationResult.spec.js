@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.PaymentCardAuthenticationResult();
+    instance = new FirstDataGateway.PaymentCardAuthenticationResult();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,37 +52,37 @@
   describe('PaymentCardAuthenticationResult', function() {
     it('should create an instance of PaymentCardAuthenticationResult', function() {
       // uncomment below and update the code to test PaymentCardAuthenticationResult
-      //var instane = new FirstApiSdk.PaymentCardAuthenticationResult();
-      //expect(instance).to.be.a(FirstApiSdk.PaymentCardAuthenticationResult);
+      //var instane = new FirstDataGateway.PaymentCardAuthenticationResult();
+      //expect(instance).to.be.a(FirstDataGateway.PaymentCardAuthenticationResult);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new FirstApiSdk.PaymentCardAuthenticationResult();
+      //var instane = new FirstDataGateway.PaymentCardAuthenticationResult();
       //expect(instance).to.be();
     });
 
     it('should have the property verificationResponse (base name: "verificationResponse")', function() {
       // uncomment below and update the code to test the property verificationResponse
-      //var instane = new FirstApiSdk.PaymentCardAuthenticationResult();
+      //var instane = new FirstDataGateway.PaymentCardAuthenticationResult();
       //expect(instance).to.be();
     });
 
     it('should have the property payerAuthenticationResponse (base name: "payerAuthenticationResponse")', function() {
       // uncomment below and update the code to test the property payerAuthenticationResponse
-      //var instane = new FirstApiSdk.PaymentCardAuthenticationResult();
+      //var instane = new FirstDataGateway.PaymentCardAuthenticationResult();
       //expect(instance).to.be();
     });
 
     it('should have the property authenticationValue (base name: "authenticationValue")', function() {
       // uncomment below and update the code to test the property authenticationValue
-      //var instane = new FirstApiSdk.PaymentCardAuthenticationResult();
+      //var instane = new FirstDataGateway.PaymentCardAuthenticationResult();
       //expect(instance).to.be();
     });
 
     it('should have the property xid (base name: "xid")', function() {
       // uncomment below and update the code to test the property xid
-      //var instane = new FirstApiSdk.PaymentCardAuthenticationResult();
+      //var instane = new FirstDataGateway.PaymentCardAuthenticationResult();
       //expect(instance).to.be();
     });
 

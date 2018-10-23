@@ -1,4 +1,4 @@
-# FirstApiSdk.Sepa
+# FirstDataGateway.Sepa
 
 ## Properties
 Name | Type | Description | Notes

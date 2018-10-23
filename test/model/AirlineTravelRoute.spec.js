@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.AirlineTravelRoute();
+    instance = new FirstDataGateway.AirlineTravelRoute();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,61 +52,61 @@
   describe('AirlineTravelRoute', function() {
     it('should create an instance of AirlineTravelRoute', function() {
       // uncomment below and update the code to test AirlineTravelRoute
-      //var instane = new FirstApiSdk.AirlineTravelRoute();
-      //expect(instance).to.be.a(FirstApiSdk.AirlineTravelRoute);
+      //var instane = new FirstDataGateway.AirlineTravelRoute();
+      //expect(instance).to.be.a(FirstDataGateway.AirlineTravelRoute);
     });
 
     it('should have the property departureDate (base name: "departureDate")', function() {
       // uncomment below and update the code to test the property departureDate
-      //var instane = new FirstApiSdk.AirlineTravelRoute();
+      //var instane = new FirstDataGateway.AirlineTravelRoute();
       //expect(instance).to.be();
     });
 
     it('should have the property origin (base name: "origin")', function() {
       // uncomment below and update the code to test the property origin
-      //var instane = new FirstApiSdk.AirlineTravelRoute();
+      //var instane = new FirstDataGateway.AirlineTravelRoute();
       //expect(instance).to.be();
     });
 
     it('should have the property destination (base name: "destination")', function() {
       // uncomment below and update the code to test the property destination
-      //var instane = new FirstApiSdk.AirlineTravelRoute();
+      //var instane = new FirstDataGateway.AirlineTravelRoute();
       //expect(instance).to.be();
     });
 
     it('should have the property carrierCode (base name: "carrierCode")', function() {
       // uncomment below and update the code to test the property carrierCode
-      //var instane = new FirstApiSdk.AirlineTravelRoute();
+      //var instane = new FirstDataGateway.AirlineTravelRoute();
       //expect(instance).to.be();
     });
 
     it('should have the property serviceClass (base name: "serviceClass")', function() {
       // uncomment below and update the code to test the property serviceClass
-      //var instane = new FirstApiSdk.AirlineTravelRoute();
+      //var instane = new FirstDataGateway.AirlineTravelRoute();
       //expect(instance).to.be();
     });
 
     it('should have the property stopoverType (base name: "stopoverType")', function() {
       // uncomment below and update the code to test the property stopoverType
-      //var instane = new FirstApiSdk.AirlineTravelRoute();
+      //var instane = new FirstDataGateway.AirlineTravelRoute();
       //expect(instance).to.be();
     });
 
     it('should have the property fareBasisCode (base name: "fareBasisCode")', function() {
       // uncomment below and update the code to test the property fareBasisCode
-      //var instane = new FirstApiSdk.AirlineTravelRoute();
+      //var instane = new FirstDataGateway.AirlineTravelRoute();
       //expect(instance).to.be();
     });
 
     it('should have the property departureTax (base name: "departureTax")', function() {
       // uncomment below and update the code to test the property departureTax
-      //var instane = new FirstApiSdk.AirlineTravelRoute();
+      //var instane = new FirstDataGateway.AirlineTravelRoute();
       //expect(instance).to.be();
     });
 
     it('should have the property flightNumber (base name: "flightNumber")', function() {
       // uncomment below and update the code to test the property flightNumber
-      //var instane = new FirstApiSdk.AirlineTravelRoute();
+      //var instane = new FirstDataGateway.AirlineTravelRoute();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# FirstApiSdk.SplitShipment
+# FirstDataGateway.SplitShipment
 
 ## Properties
 Name | Type | Description | Notes

@@ -22,17 +22,17 @@
     module.exports = factory(require('superagent'), require('querystring'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.ApiClient = factory(root.superagent, root.querystring);
+    root.FirstDataGateway.ApiClient = factory(root.superagent, root.querystring);
   }
 }(this, function(superagent, querystring) {
   'use strict';
 
   /**
    * @module ApiClient
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

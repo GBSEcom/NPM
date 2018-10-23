@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.PayPal();
+    instance = new FirstDataGateway.PayPal();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,13 +52,13 @@
   describe('PayPal', function() {
     it('should create an instance of PayPal', function() {
       // uncomment below and update the code to test PayPal
-      //var instane = new FirstApiSdk.PayPal();
-      //expect(instance).to.be.a(FirstApiSdk.PayPal);
+      //var instane = new FirstDataGateway.PayPal();
+      //expect(instance).to.be.a(FirstDataGateway.PayPal);
     });
 
     it('should have the property recipientEmail (base name: "recipientEmail")', function() {
       // uncomment below and update the code to test the property recipientEmail
-      //var instane = new FirstApiSdk.PayPal();
+      //var instane = new FirstDataGateway.PayPal();
       //expect(instance).to.be();
     });
 

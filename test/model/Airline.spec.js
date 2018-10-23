@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.Airline();
+    instance = new FirstDataGateway.Airline();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,91 +52,91 @@
   describe('Airline', function() {
     it('should create an instance of Airline', function() {
       // uncomment below and update the code to test Airline
-      //var instane = new FirstApiSdk.Airline();
-      //expect(instance).to.be.a(FirstApiSdk.Airline);
+      //var instane = new FirstDataGateway.Airline();
+      //expect(instance).to.be.a(FirstDataGateway.Airline);
     });
 
     it('should have the property passengerName (base name: "passengerName")', function() {
       // uncomment below and update the code to test the property passengerName
-      //var instane = new FirstApiSdk.Airline();
+      //var instane = new FirstDataGateway.Airline();
       //expect(instance).to.be();
     });
 
     it('should have the property ticketNumber (base name: "ticketNumber")', function() {
       // uncomment below and update the code to test the property ticketNumber
-      //var instane = new FirstApiSdk.Airline();
+      //var instane = new FirstDataGateway.Airline();
       //expect(instance).to.be();
     });
 
     it('should have the property issuingCarrier (base name: "issuingCarrier")', function() {
       // uncomment below and update the code to test the property issuingCarrier
-      //var instane = new FirstApiSdk.Airline();
+      //var instane = new FirstDataGateway.Airline();
       //expect(instance).to.be();
     });
 
     it('should have the property carrierName (base name: "carrierName")', function() {
       // uncomment below and update the code to test the property carrierName
-      //var instane = new FirstApiSdk.Airline();
+      //var instane = new FirstDataGateway.Airline();
       //expect(instance).to.be();
     });
 
     it('should have the property travelAgencyIataCode (base name: "travelAgencyIataCode")', function() {
       // uncomment below and update the code to test the property travelAgencyIataCode
-      //var instane = new FirstApiSdk.Airline();
+      //var instane = new FirstDataGateway.Airline();
       //expect(instance).to.be();
     });
 
     it('should have the property travelAgencyName (base name: "travelAgencyName")', function() {
       // uncomment below and update the code to test the property travelAgencyName
-      //var instane = new FirstApiSdk.Airline();
+      //var instane = new FirstDataGateway.Airline();
       //expect(instance).to.be();
     });
 
     it('should have the property airlinePlanNumber (base name: "airlinePlanNumber")', function() {
       // uncomment below and update the code to test the property airlinePlanNumber
-      //var instane = new FirstApiSdk.Airline();
+      //var instane = new FirstDataGateway.Airline();
       //expect(instance).to.be();
     });
 
     it('should have the property airlineInvoiceNumber (base name: "airlineInvoiceNumber")', function() {
       // uncomment below and update the code to test the property airlineInvoiceNumber
-      //var instane = new FirstApiSdk.Airline();
+      //var instane = new FirstDataGateway.Airline();
       //expect(instance).to.be();
     });
 
     it('should have the property reservationSystem (base name: "reservationSystem")', function() {
       // uncomment below and update the code to test the property reservationSystem
-      //var instane = new FirstApiSdk.Airline();
+      //var instane = new FirstDataGateway.Airline();
       //expect(instance).to.be();
     });
 
     it('should have the property restricted (base name: "restricted")', function() {
       // uncomment below and update the code to test the property restricted
-      //var instane = new FirstApiSdk.Airline();
+      //var instane = new FirstDataGateway.Airline();
       //expect(instance).to.be();
     });
 
     it('should have the property travelRoute (base name: "travelRoute")', function() {
       // uncomment below and update the code to test the property travelRoute
-      //var instane = new FirstApiSdk.Airline();
+      //var instane = new FirstDataGateway.Airline();
       //expect(instance).to.be();
     });
 
     it('should have the property relatedTicketNumber (base name: "relatedTicketNumber")', function() {
       // uncomment below and update the code to test the property relatedTicketNumber
-      //var instane = new FirstApiSdk.Airline();
+      //var instane = new FirstDataGateway.Airline();
       //expect(instance).to.be();
     });
 
     it('should have the property ancillaryServiceCategory (base name: "ancillaryServiceCategory")', function() {
       // uncomment below and update the code to test the property ancillaryServiceCategory
-      //var instane = new FirstApiSdk.Airline();
+      //var instane = new FirstDataGateway.Airline();
       //expect(instance).to.be();
     });
 
     it('should have the property ticketPurchase (base name: "ticketPurchase")', function() {
       // uncomment below and update the code to test the property ticketPurchase
-      //var instane = new FirstApiSdk.Airline();
+      //var instane = new FirstDataGateway.Airline();
       //expect(instance).to.be();
     });
 

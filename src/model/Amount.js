@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./AmountComponents'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.Amount = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.AmountComponents);
+    root.FirstDataGateway.Amount = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.AmountComponents);
   }
 }(this, function(ApiClient, AmountComponents) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The Amount model module.
    * @module model/Amount
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

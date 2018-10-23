@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Error'), require('./ResponseType'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.ErrorResponse = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.Error, root.FirstApiSdk.ResponseType);
+    root.FirstDataGateway.ErrorResponse = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.Error, root.FirstDataGateway.ResponseType);
   }
 }(this, function(ApiClient, Error, ResponseType) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The ErrorResponse model module.
    * @module model/ErrorResponse
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

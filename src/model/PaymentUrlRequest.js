@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Amount'), require('./ClientLocale'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.PaymentUrlRequest = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.Amount, root.FirstApiSdk.ClientLocale);
+    root.FirstDataGateway.PaymentUrlRequest = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.Amount, root.FirstDataGateway.ClientLocale);
   }
 }(this, function(ApiClient, Amount, ClientLocale) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The PaymentUrlRequest model module.
    * @module model/PaymentUrlRequest
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

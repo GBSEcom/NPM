@@ -22,9 +22,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
@@ -51,8 +51,8 @@
   describe('TransactionType', function() {
     it('should create an instance of TransactionType', function() {
       // uncomment below and update the code to test TransactionType
-      //var instane = new FirstApiSdk.TransactionType();
-      //expect(instance).to.be.a(FirstApiSdk.TransactionType);
+      //var instane = new FirstDataGateway.TransactionType();
+      //expect(instance).to.be.a(FirstDataGateway.TransactionType);
     });
 
   });

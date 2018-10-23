@@ -1,4 +1,4 @@
-# FirstApiSdk.IndustrySpecificExtensions
+# FirstDataGateway.IndustrySpecificExtensions
 
 ## Properties
 Name | Type | Description | Notes

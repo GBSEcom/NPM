@@ -1,4 +1,4 @@
-# FirstApiSdk.Expiration
+# FirstDataGateway.Expiration
 
 ## Properties
 Name | Type | Description | Notes

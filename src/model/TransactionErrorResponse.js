@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Amount'), require('./Error'), require('./ProcessorData'), require('./ResponseType'), require('./TransactionResponse'), require('./TransactionResponseAuthenticationRedirect'), require('./TransactionType'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.TransactionErrorResponse = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.Amount, root.FirstApiSdk.Error, root.FirstApiSdk.ProcessorData, root.FirstApiSdk.ResponseType, root.FirstApiSdk.TransactionResponse, root.FirstApiSdk.TransactionResponseAuthenticationRedirect, root.FirstApiSdk.TransactionType);
+    root.FirstDataGateway.TransactionErrorResponse = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.Amount, root.FirstDataGateway.Error, root.FirstDataGateway.ProcessorData, root.FirstDataGateway.ResponseType, root.FirstDataGateway.TransactionResponse, root.FirstDataGateway.TransactionResponseAuthenticationRedirect, root.FirstDataGateway.TransactionType);
   }
 }(this, function(ApiClient, Amount, Error, ProcessorData, ResponseType, TransactionResponse, TransactionResponseAuthenticationRedirect, TransactionType) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The TransactionErrorResponse model module.
    * @module model/TransactionErrorResponse
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

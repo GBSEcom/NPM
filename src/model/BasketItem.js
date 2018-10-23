@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Amount'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.BasketItem = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.Amount);
+    root.FirstDataGateway.BasketItem = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.Amount);
   }
 }(this, function(ApiClient, Amount) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The BasketItem model module.
    * @module model/BasketItem
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

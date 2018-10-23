@@ -1,4 +1,4 @@
-# FirstApiSdk.OrderApi
+# FirstDataGateway.OrderApi
 
 All URIs are relative to *https://cert.api.firstdata.com/gateway*
 
@@ -18,9 +18,9 @@ This can be used for postauth and partial postauths.
 
 ### Example
 ```javascript
-var FirstApiSdk = require('FirstApiSDK');
+var FirstDataGateway = require('FirstDataGateway');
 
-var apiInstance = new FirstApiSdk.OrderApi();
+var apiInstance = new FirstDataGateway.OrderApi();
 
 var contentType = "application/json"; // String | content type
 
@@ -34,7 +34,7 @@ var messageSignature = "messageSignature_example"; // String | Used to ensure th
 
 var orderId = "orderId_example"; // String | Gateway order identifier as returned in the parameter orderId
 
-var payload = new FirstApiSdk.SecondaryTransaction(); // SecondaryTransaction | 
+var payload = new FirstDataGateway.SecondaryTransaction(); // SecondaryTransaction | 
 
 var opts = { 
   'storeId': "storeId_example" // String | an optional outlet id for clients that support multiple store in the same developer app
@@ -83,9 +83,9 @@ This can be used for Returns and Partial Returns.
 
 ### Example
 ```javascript
-var FirstApiSdk = require('FirstApiSDK');
+var FirstDataGateway = require('FirstDataGateway');
 
-var apiInstance = new FirstApiSdk.OrderApi();
+var apiInstance = new FirstDataGateway.OrderApi();
 
 var contentType = "application/json"; // String | content type
 
@@ -99,7 +99,7 @@ var messageSignature = "messageSignature_example"; // String | Used to ensure th
 
 var orderId = "orderId_example"; // String | Gateway order identifier as returned in the parameter orderId
 
-var payload = new FirstApiSdk.SecondaryTransaction(); // SecondaryTransaction | 
+var payload = new FirstDataGateway.SecondaryTransaction(); // SecondaryTransaction | 
 
 var opts = { 
   'storeId': "storeId_example" // String | an optional outlet id for clients that support multiple store in the same developer app

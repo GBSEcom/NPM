@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.BasketItem();
+    instance = new FirstDataGateway.BasketItem();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,31 +52,31 @@
   describe('BasketItem', function() {
     it('should create an instance of BasketItem', function() {
       // uncomment below and update the code to test BasketItem
-      //var instane = new FirstApiSdk.BasketItem();
-      //expect(instance).to.be.a(FirstApiSdk.BasketItem);
+      //var instane = new FirstDataGateway.BasketItem();
+      //expect(instance).to.be.a(FirstDataGateway.BasketItem);
     });
 
     it('should have the property id (base name: "id")', function() {
       // uncomment below and update the code to test the property id
-      //var instane = new FirstApiSdk.BasketItem();
+      //var instane = new FirstDataGateway.BasketItem();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new FirstApiSdk.BasketItem();
+      //var instane = new FirstDataGateway.BasketItem();
       //expect(instance).to.be();
     });
 
     it('should have the property unitPrice (base name: "unitPrice")', function() {
       // uncomment below and update the code to test the property unitPrice
-      //var instane = new FirstApiSdk.BasketItem();
+      //var instane = new FirstDataGateway.BasketItem();
       //expect(instance).to.be();
     });
 
     it('should have the property count (base name: "count")', function() {
       // uncomment below and update the code to test the property count
-      //var instane = new FirstApiSdk.BasketItem();
+      //var instane = new FirstDataGateway.BasketItem();
       //expect(instance).to.be();
     });
 

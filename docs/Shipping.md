@@ -1,4 +1,4 @@
-# FirstApiSdk.Shipping
+# FirstDataGateway.Shipping
 
 ## Properties
 Name | Type | Description | Notes

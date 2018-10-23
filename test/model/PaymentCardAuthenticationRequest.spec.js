@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.PaymentCardAuthenticationRequest();
+    instance = new FirstDataGateway.PaymentCardAuthenticationRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,13 +52,13 @@
   describe('PaymentCardAuthenticationRequest', function() {
     it('should create an instance of PaymentCardAuthenticationRequest', function() {
       // uncomment below and update the code to test PaymentCardAuthenticationRequest
-      //var instane = new FirstApiSdk.PaymentCardAuthenticationRequest();
-      //expect(instance).to.be.a(FirstApiSdk.PaymentCardAuthenticationRequest);
+      //var instane = new FirstDataGateway.PaymentCardAuthenticationRequest();
+      //expect(instance).to.be.a(FirstDataGateway.PaymentCardAuthenticationRequest);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new FirstApiSdk.PaymentCardAuthenticationRequest();
+      //var instane = new FirstDataGateway.PaymentCardAuthenticationRequest();
       //expect(instance).to.be();
     });
 

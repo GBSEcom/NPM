@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.StoredCredential();
+    instance = new FirstDataGateway.StoredCredential();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,31 +52,31 @@
   describe('StoredCredential', function() {
     it('should create an instance of StoredCredential', function() {
       // uncomment below and update the code to test StoredCredential
-      //var instane = new FirstApiSdk.StoredCredential();
-      //expect(instance).to.be.a(FirstApiSdk.StoredCredential);
+      //var instane = new FirstDataGateway.StoredCredential();
+      //expect(instance).to.be.a(FirstDataGateway.StoredCredential);
     });
 
     it('should have the property sequence (base name: "sequence")', function() {
       // uncomment below and update the code to test the property sequence
-      //var instane = new FirstApiSdk.StoredCredential();
+      //var instane = new FirstDataGateway.StoredCredential();
       //expect(instance).to.be();
     });
 
     it('should have the property scheduled (base name: "scheduled")', function() {
       // uncomment below and update the code to test the property scheduled
-      //var instane = new FirstApiSdk.StoredCredential();
+      //var instane = new FirstDataGateway.StoredCredential();
       //expect(instance).to.be();
     });
 
     it('should have the property referencedSchemeTransactionId (base name: "referencedSchemeTransactionId")', function() {
       // uncomment below and update the code to test the property referencedSchemeTransactionId
-      //var instane = new FirstApiSdk.StoredCredential();
+      //var instane = new FirstDataGateway.StoredCredential();
       //expect(instance).to.be();
     });
 
     it('should have the property initiator (base name: "initiator")', function() {
       // uncomment below and update the code to test the property initiator
-      //var instane = new FirstApiSdk.StoredCredential();
+      //var instane = new FirstDataGateway.StoredCredential();
       //expect(instance).to.be();
     });
 

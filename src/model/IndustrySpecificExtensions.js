@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Airline'), require('./CarRental'), require('./Lodging'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.IndustrySpecificExtensions = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.Airline, root.FirstApiSdk.CarRental, root.FirstApiSdk.Lodging);
+    root.FirstDataGateway.IndustrySpecificExtensions = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.Airline, root.FirstDataGateway.CarRental, root.FirstDataGateway.Lodging);
   }
 }(this, function(ApiClient, Airline, CarRental, Lodging) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The IndustrySpecificExtensions model module.
    * @module model/IndustrySpecificExtensions
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

@@ -1,4 +1,4 @@
-# FirstApiSdk.Order
+# FirstDataGateway.Order
 
 ## Properties
 Name | Type | Description | Notes

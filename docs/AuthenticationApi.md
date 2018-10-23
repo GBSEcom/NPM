@@ -1,4 +1,4 @@
-# FirstApiSdk.AuthenticationApi
+# FirstDataGateway.AuthenticationApi
 
 All URIs are relative to *https://cert.api.firstdata.com/gateway*
 
@@ -17,9 +17,9 @@ This is the access token generation call for authorizing subsequent financial tr
 
 ### Example
 ```javascript
-var FirstApiSdk = require('FirstApiSDK');
+var FirstDataGateway = require('FirstDataGateway');
 
-var apiInstance = new FirstApiSdk.AuthenticationApi();
+var apiInstance = new FirstDataGateway.AuthenticationApi();
 
 var contentType = "application/json"; // String | content type
 

@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.TransactionErrorResponse();
+    instance = new FirstDataGateway.TransactionErrorResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,13 +52,13 @@
   describe('TransactionErrorResponse', function() {
     it('should create an instance of TransactionErrorResponse', function() {
       // uncomment below and update the code to test TransactionErrorResponse
-      //var instane = new FirstApiSdk.TransactionErrorResponse();
-      //expect(instance).to.be.a(FirstApiSdk.TransactionErrorResponse);
+      //var instane = new FirstDataGateway.TransactionErrorResponse();
+      //expect(instance).to.be.a(FirstDataGateway.TransactionErrorResponse);
     });
 
     it('should have the property error (base name: "error")', function() {
       // uncomment below and update the code to test the property error
-      //var instane = new FirstApiSdk.TransactionErrorResponse();
+      //var instane = new FirstDataGateway.TransactionErrorResponse();
       //expect(instance).to.be();
     });
 

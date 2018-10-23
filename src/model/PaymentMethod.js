@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./PayPal'), require('./PaymentCard'), require('./Sepa'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.PaymentMethod = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.PayPal, root.FirstApiSdk.PaymentCard, root.FirstApiSdk.Sepa);
+    root.FirstDataGateway.PaymentMethod = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.PayPal, root.FirstDataGateway.PaymentCard, root.FirstDataGateway.Sepa);
   }
 }(this, function(ApiClient, PayPal, PaymentCard, Sepa) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The PaymentMethod model module.
    * @module model/PaymentMethod
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

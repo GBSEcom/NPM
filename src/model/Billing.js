@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Address'), require('./Contact'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.Billing = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.Address, root.FirstApiSdk.Contact);
+    root.FirstDataGateway.Billing = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.Address, root.FirstDataGateway.Contact);
   }
 }(this, function(ApiClient, Address, Contact) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The Billing model module.
    * @module model/Billing
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.LodgingExtraCharges = factory(root.FirstApiSdk.ApiClient);
+    root.FirstDataGateway.LodgingExtraCharges = factory(root.FirstDataGateway.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The LodgingExtraCharges model module.
    * @module model/LodgingExtraCharges
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

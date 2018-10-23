@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.TransactionResponseAuthenticationRedirect();
+    instance = new FirstDataGateway.TransactionResponseAuthenticationRedirect();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('TransactionResponseAuthenticationRedirect', function() {
     it('should create an instance of TransactionResponseAuthenticationRedirect', function() {
       // uncomment below and update the code to test TransactionResponseAuthenticationRedirect
-      //var instane = new FirstApiSdk.TransactionResponseAuthenticationRedirect();
-      //expect(instance).to.be.a(FirstApiSdk.TransactionResponseAuthenticationRedirect);
+      //var instane = new FirstDataGateway.TransactionResponseAuthenticationRedirect();
+      //expect(instance).to.be.a(FirstDataGateway.TransactionResponseAuthenticationRedirect);
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new FirstApiSdk.TransactionResponseAuthenticationRedirect();
+      //var instane = new FirstDataGateway.TransactionResponseAuthenticationRedirect();
       //expect(instance).to.be();
     });
 
     it('should have the property targetUrl (base name: "targetUrl")', function() {
       // uncomment below and update the code to test the property targetUrl
-      //var instane = new FirstApiSdk.TransactionResponseAuthenticationRedirect();
+      //var instane = new FirstDataGateway.TransactionResponseAuthenticationRedirect();
       //expect(instance).to.be();
     });
 
     it('should have the property params (base name: "params")', function() {
       // uncomment below and update the code to test the property params
-      //var instane = new FirstApiSdk.TransactionResponseAuthenticationRedirect();
+      //var instane = new FirstDataGateway.TransactionResponseAuthenticationRedirect();
       //expect(instance).to.be();
     });
 

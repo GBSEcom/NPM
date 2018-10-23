@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.CardVerificationsTransaction();
+    instance = new FirstDataGateway.CardVerificationsTransaction();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('CardVerificationsTransaction', function() {
     it('should create an instance of CardVerificationsTransaction', function() {
       // uncomment below and update the code to test CardVerificationsTransaction
-      //var instane = new FirstApiSdk.CardVerificationsTransaction();
-      //expect(instance).to.be.a(FirstApiSdk.CardVerificationsTransaction);
+      //var instane = new FirstDataGateway.CardVerificationsTransaction();
+      //expect(instance).to.be.a(FirstDataGateway.CardVerificationsTransaction);
     });
 
     it('should have the property storeId (base name: "storeId")', function() {
       // uncomment below and update the code to test the property storeId
-      //var instane = new FirstApiSdk.CardVerificationsTransaction();
+      //var instane = new FirstDataGateway.CardVerificationsTransaction();
       //expect(instance).to.be();
     });
 
     it('should have the property paymentMethod (base name: "paymentMethod")', function() {
       // uncomment below and update the code to test the property paymentMethod
-      //var instane = new FirstApiSdk.CardVerificationsTransaction();
+      //var instane = new FirstDataGateway.CardVerificationsTransaction();
       //expect(instance).to.be();
     });
 

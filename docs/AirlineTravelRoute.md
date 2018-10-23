@@ -1,4 +1,4 @@
-# FirstApiSdk.AirlineTravelRoute
+# FirstDataGateway.AirlineTravelRoute
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# FirstApiSdk.LodgingExtraCharges
+# FirstDataGateway.LodgingExtraCharges
 
 ## Properties
 Name | Type | Description | Notes

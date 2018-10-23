@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.SecondaryTransaction();
+    instance = new FirstDataGateway.SecondaryTransaction();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('SecondaryTransaction', function() {
     it('should create an instance of SecondaryTransaction', function() {
       // uncomment below and update the code to test SecondaryTransaction
-      //var instane = new FirstApiSdk.SecondaryTransaction();
-      //expect(instance).to.be.a(FirstApiSdk.SecondaryTransaction);
+      //var instane = new FirstDataGateway.SecondaryTransaction();
+      //expect(instance).to.be.a(FirstDataGateway.SecondaryTransaction);
     });
 
     it('should have the property amount (base name: "amount")', function() {
       // uncomment below and update the code to test the property amount
-      //var instane = new FirstApiSdk.SecondaryTransaction();
+      //var instane = new FirstDataGateway.SecondaryTransaction();
       //expect(instance).to.be();
     });
 
     it('should have the property splitShipment (base name: "splitShipment")', function() {
       // uncomment below and update the code to test the property splitShipment
-      //var instane = new FirstApiSdk.SecondaryTransaction();
+      //var instane = new FirstDataGateway.SecondaryTransaction();
       //expect(instance).to.be();
     });
 

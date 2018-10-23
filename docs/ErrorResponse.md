@@ -1,4 +1,4 @@
-# FirstApiSdk.ErrorResponse
+# FirstDataGateway.ErrorResponse
 
 ## Properties
 Name | Type | Description | Notes

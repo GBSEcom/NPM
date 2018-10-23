@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.Sepa();
+    instance = new FirstDataGateway.Sepa();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,37 +52,37 @@
   describe('Sepa', function() {
     it('should create an instance of Sepa', function() {
       // uncomment below and update the code to test Sepa
-      //var instane = new FirstApiSdk.Sepa();
-      //expect(instance).to.be.a(FirstApiSdk.Sepa);
+      //var instane = new FirstDataGateway.Sepa();
+      //expect(instance).to.be.a(FirstDataGateway.Sepa);
     });
 
     it('should have the property iban (base name: "iban")', function() {
       // uncomment below and update the code to test the property iban
-      //var instane = new FirstApiSdk.Sepa();
+      //var instane = new FirstDataGateway.Sepa();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new FirstApiSdk.Sepa();
+      //var instane = new FirstDataGateway.Sepa();
       //expect(instance).to.be();
     });
 
     it('should have the property country (base name: "country")', function() {
       // uncomment below and update the code to test the property country
-      //var instane = new FirstApiSdk.Sepa();
+      //var instane = new FirstDataGateway.Sepa();
       //expect(instance).to.be();
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new FirstApiSdk.Sepa();
+      //var instane = new FirstDataGateway.Sepa();
       //expect(instance).to.be();
     });
 
     it('should have the property mandate (base name: "mandate")', function() {
       // uncomment below and update the code to test the property mandate
-      //var instane = new FirstApiSdk.Sepa();
+      //var instane = new FirstDataGateway.Sepa();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# FirstApiSdk.Address
+# FirstDataGateway.Address
 
 ## Properties
 Name | Type | Description | Notes

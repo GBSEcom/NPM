@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./InstallmentOptions'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.PrimaryTransactionAdditionalDetails = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.InstallmentOptions);
+    root.FirstDataGateway.PrimaryTransactionAdditionalDetails = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.InstallmentOptions);
   }
 }(this, function(ApiClient, InstallmentOptions) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The PrimaryTransactionAdditionalDetails model module.
    * @module model/PrimaryTransactionAdditionalDetails
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

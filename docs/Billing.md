@@ -1,4 +1,4 @@
-# FirstApiSdk.Billing
+# FirstDataGateway.Billing
 
 ## Properties
 Name | Type | Description | Notes

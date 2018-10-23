@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.Amount();
+    instance = new FirstDataGateway.Amount();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('Amount', function() {
     it('should create an instance of Amount', function() {
       // uncomment below and update the code to test Amount
-      //var instane = new FirstApiSdk.Amount();
-      //expect(instance).to.be.a(FirstApiSdk.Amount);
+      //var instane = new FirstDataGateway.Amount();
+      //expect(instance).to.be.a(FirstDataGateway.Amount);
     });
 
     it('should have the property total (base name: "total")', function() {
       // uncomment below and update the code to test the property total
-      //var instane = new FirstApiSdk.Amount();
+      //var instane = new FirstDataGateway.Amount();
       //expect(instance).to.be();
     });
 
     it('should have the property currency (base name: "currency")', function() {
       // uncomment below and update the code to test the property currency
-      //var instane = new FirstApiSdk.Amount();
+      //var instane = new FirstDataGateway.Amount();
       //expect(instance).to.be();
     });
 
     it('should have the property components (base name: "components")', function() {
       // uncomment below and update the code to test the property components
-      //var instane = new FirstApiSdk.Amount();
+      //var instane = new FirstDataGateway.Amount();
       //expect(instance).to.be();
     });
 

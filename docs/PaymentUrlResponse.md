@@ -1,4 +1,4 @@
-# FirstApiSdk.PaymentUrlResponse
+# FirstDataGateway.PaymentUrlResponse
 
 ## Properties
 Name | Type | Description | Notes

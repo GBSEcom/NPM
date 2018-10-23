@@ -1,4 +1,4 @@
-# FirstApiSdk.AuthenticationResponseVerification
+# FirstDataGateway.AuthenticationResponseVerification
 
 ## Properties
 Name | Type | Description | Notes

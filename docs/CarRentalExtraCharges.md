@@ -1,4 +1,4 @@
-# FirstApiSdk.CarRentalExtraCharges
+# FirstDataGateway.CarRentalExtraCharges
 
 ## Properties
 Name | Type | Description | Notes

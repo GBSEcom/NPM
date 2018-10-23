@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./TransactionResponseAuthenticationRedirectParams'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.TransactionResponseAuthenticationRedirect = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.TransactionResponseAuthenticationRedirectParams);
+    root.FirstDataGateway.TransactionResponseAuthenticationRedirect = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.TransactionResponseAuthenticationRedirectParams);
   }
 }(this, function(ApiClient, TransactionResponseAuthenticationRedirectParams) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The TransactionResponseAuthenticationRedirect model module.
    * @module model/TransactionResponseAuthenticationRedirect
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/AccessTokenResponse'), require('../model/ErrorResponse'), require('../model/TransactionResponse'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.AuthenticationApi = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.AccessTokenResponse, root.FirstApiSdk.ErrorResponse, root.FirstApiSdk.TransactionResponse);
+    root.FirstDataGateway.AuthenticationApi = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.AccessTokenResponse, root.FirstDataGateway.ErrorResponse, root.FirstDataGateway.TransactionResponse);
   }
 }(this, function(ApiClient, AccessTokenResponse, ErrorResponse, TransactionResponse) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * Authentication service.
    * @module api/AuthenticationApi
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

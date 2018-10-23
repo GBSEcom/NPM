@@ -1,4 +1,4 @@
-# FirstApiSdk.TransactionResponse
+# FirstDataGateway.TransactionResponse
 
 ## Properties
 Name | Type | Description | Notes

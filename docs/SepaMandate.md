@@ -1,4 +1,4 @@
-# FirstApiSdk.SepaMandate
+# FirstDataGateway.SepaMandate
 
 ## Properties
 Name | Type | Description | Notes

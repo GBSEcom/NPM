@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.Billing();
+    instance = new FirstDataGateway.Billing();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,43 +52,43 @@
   describe('Billing', function() {
     it('should create an instance of Billing', function() {
       // uncomment below and update the code to test Billing
-      //var instane = new FirstApiSdk.Billing();
-      //expect(instance).to.be.a(FirstApiSdk.Billing);
+      //var instane = new FirstDataGateway.Billing();
+      //expect(instance).to.be.a(FirstDataGateway.Billing);
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new FirstApiSdk.Billing();
+      //var instane = new FirstDataGateway.Billing();
       //expect(instance).to.be();
     });
 
     it('should have the property personalNumber (base name: "personalNumber")', function() {
       // uncomment below and update the code to test the property personalNumber
-      //var instane = new FirstApiSdk.Billing();
+      //var instane = new FirstDataGateway.Billing();
       //expect(instance).to.be();
     });
 
     it('should have the property birthDate (base name: "birthDate")', function() {
       // uncomment below and update the code to test the property birthDate
-      //var instane = new FirstApiSdk.Billing();
+      //var instane = new FirstDataGateway.Billing();
       //expect(instance).to.be();
     });
 
     it('should have the property gender (base name: "gender")', function() {
       // uncomment below and update the code to test the property gender
-      //var instane = new FirstApiSdk.Billing();
+      //var instane = new FirstDataGateway.Billing();
       //expect(instance).to.be();
     });
 
     it('should have the property contact (base name: "contact")', function() {
       // uncomment below and update the code to test the property contact
-      //var instane = new FirstApiSdk.Billing();
+      //var instane = new FirstDataGateway.Billing();
       //expect(instance).to.be();
     });
 
     it('should have the property address (base name: "address")', function() {
       // uncomment below and update the code to test the property address
-      //var instane = new FirstApiSdk.Billing();
+      //var instane = new FirstDataGateway.Billing();
       //expect(instance).to.be();
     });
 

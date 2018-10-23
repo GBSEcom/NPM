@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.AmountComponents();
+    instance = new FirstDataGateway.AmountComponents();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,49 +52,49 @@
   describe('AmountComponents', function() {
     it('should create an instance of AmountComponents', function() {
       // uncomment below and update the code to test AmountComponents
-      //var instane = new FirstApiSdk.AmountComponents();
-      //expect(instance).to.be.a(FirstApiSdk.AmountComponents);
+      //var instane = new FirstDataGateway.AmountComponents();
+      //expect(instance).to.be.a(FirstDataGateway.AmountComponents);
     });
 
     it('should have the property subtotal (base name: "subtotal")', function() {
       // uncomment below and update the code to test the property subtotal
-      //var instane = new FirstApiSdk.AmountComponents();
+      //var instane = new FirstDataGateway.AmountComponents();
       //expect(instance).to.be();
     });
 
     it('should have the property vatAmount (base name: "vatAmount")', function() {
       // uncomment below and update the code to test the property vatAmount
-      //var instane = new FirstApiSdk.AmountComponents();
+      //var instane = new FirstDataGateway.AmountComponents();
       //expect(instance).to.be();
     });
 
     it('should have the property localTax (base name: "localTax")', function() {
       // uncomment below and update the code to test the property localTax
-      //var instane = new FirstApiSdk.AmountComponents();
+      //var instane = new FirstDataGateway.AmountComponents();
       //expect(instance).to.be();
     });
 
     it('should have the property shipping (base name: "shipping")', function() {
       // uncomment below and update the code to test the property shipping
-      //var instane = new FirstApiSdk.AmountComponents();
+      //var instane = new FirstDataGateway.AmountComponents();
       //expect(instance).to.be();
     });
 
     it('should have the property cashback (base name: "cashback")', function() {
       // uncomment below and update the code to test the property cashback
-      //var instane = new FirstApiSdk.AmountComponents();
+      //var instane = new FirstDataGateway.AmountComponents();
       //expect(instance).to.be();
     });
 
     it('should have the property tip (base name: "tip")', function() {
       // uncomment below and update the code to test the property tip
-      //var instane = new FirstApiSdk.AmountComponents();
+      //var instane = new FirstDataGateway.AmountComponents();
       //expect(instance).to.be();
     });
 
     it('should have the property convenienceFee (base name: "convenienceFee")', function() {
       // uncomment below and update the code to test the property convenienceFee
-      //var instane = new FirstApiSdk.AmountComponents();
+      //var instane = new FirstDataGateway.AmountComponents();
       //expect(instance).to.be();
     });
 

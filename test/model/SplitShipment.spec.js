@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.SplitShipment();
+    instance = new FirstDataGateway.SplitShipment();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('SplitShipment', function() {
     it('should create an instance of SplitShipment', function() {
       // uncomment below and update the code to test SplitShipment
-      //var instane = new FirstApiSdk.SplitShipment();
-      //expect(instance).to.be.a(FirstApiSdk.SplitShipment);
+      //var instane = new FirstDataGateway.SplitShipment();
+      //expect(instance).to.be.a(FirstDataGateway.SplitShipment);
     });
 
     it('should have the property totalCount (base name: "totalCount")', function() {
       // uncomment below and update the code to test the property totalCount
-      //var instane = new FirstApiSdk.SplitShipment();
+      //var instane = new FirstDataGateway.SplitShipment();
       //expect(instance).to.be();
     });
 
     it('should have the property finalShipment (base name: "finalShipment")', function() {
       // uncomment below and update the code to test the property finalShipment
-      //var instane = new FirstApiSdk.SplitShipment();
+      //var instane = new FirstDataGateway.SplitShipment();
       //expect(instance).to.be();
     });
 

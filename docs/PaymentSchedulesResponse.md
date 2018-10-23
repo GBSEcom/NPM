@@ -1,4 +1,4 @@
-# FirstApiSdk.PaymentSchedulesResponse
+# FirstDataGateway.PaymentSchedulesResponse
 
 ## Properties
 Name | Type | Description | Notes

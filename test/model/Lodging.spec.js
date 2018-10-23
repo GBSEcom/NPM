@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.Lodging();
+    instance = new FirstDataGateway.Lodging();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,37 +52,37 @@
   describe('Lodging', function() {
     it('should create an instance of Lodging', function() {
       // uncomment below and update the code to test Lodging
-      //var instane = new FirstApiSdk.Lodging();
-      //expect(instance).to.be.a(FirstApiSdk.Lodging);
+      //var instane = new FirstDataGateway.Lodging();
+      //expect(instance).to.be.a(FirstDataGateway.Lodging);
     });
 
     it('should have the property arrivalDate (base name: "arrivalDate")', function() {
       // uncomment below and update the code to test the property arrivalDate
-      //var instane = new FirstApiSdk.Lodging();
+      //var instane = new FirstDataGateway.Lodging();
       //expect(instance).to.be();
     });
 
     it('should have the property departureDate (base name: "departureDate")', function() {
       // uncomment below and update the code to test the property departureDate
-      //var instane = new FirstApiSdk.Lodging();
+      //var instane = new FirstDataGateway.Lodging();
       //expect(instance).to.be();
     });
 
     it('should have the property folioNumber (base name: "folioNumber")', function() {
       // uncomment below and update the code to test the property folioNumber
-      //var instane = new FirstApiSdk.Lodging();
+      //var instane = new FirstDataGateway.Lodging();
       //expect(instance).to.be();
     });
 
     it('should have the property extraCharges (base name: "extraCharges")', function() {
       // uncomment below and update the code to test the property extraCharges
-      //var instane = new FirstApiSdk.Lodging();
+      //var instane = new FirstDataGateway.Lodging();
       //expect(instance).to.be();
     });
 
     it('should have the property noShowIndicator (base name: "noShowIndicator")', function() {
       // uncomment below and update the code to test the property noShowIndicator
-      //var instane = new FirstApiSdk.Lodging();
+      //var instane = new FirstDataGateway.Lodging();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# FirstApiSdk.TransactionType
+# FirstDataGateway.TransactionType
 
 ## Enum
 

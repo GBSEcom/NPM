@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.ErrorResponse();
+    instance = new FirstDataGateway.ErrorResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,31 +52,31 @@
   describe('ErrorResponse', function() {
     it('should create an instance of ErrorResponse', function() {
       // uncomment below and update the code to test ErrorResponse
-      //var instane = new FirstApiSdk.ErrorResponse();
-      //expect(instance).to.be.a(FirstApiSdk.ErrorResponse);
+      //var instane = new FirstDataGateway.ErrorResponse();
+      //expect(instance).to.be.a(FirstDataGateway.ErrorResponse);
     });
 
     it('should have the property clientRequestId (base name: "clientRequestId")', function() {
       // uncomment below and update the code to test the property clientRequestId
-      //var instane = new FirstApiSdk.ErrorResponse();
+      //var instane = new FirstDataGateway.ErrorResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property apiTraceId (base name: "apiTraceId")', function() {
       // uncomment below and update the code to test the property apiTraceId
-      //var instane = new FirstApiSdk.ErrorResponse();
+      //var instane = new FirstDataGateway.ErrorResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property responseType (base name: "responseType")', function() {
       // uncomment below and update the code to test the property responseType
-      //var instane = new FirstApiSdk.ErrorResponse();
+      //var instane = new FirstDataGateway.ErrorResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property error (base name: "error")', function() {
       // uncomment below and update the code to test the property error
-      //var instane = new FirstApiSdk.ErrorResponse();
+      //var instane = new FirstDataGateway.ErrorResponse();
       //expect(instance).to.be();
     });
 

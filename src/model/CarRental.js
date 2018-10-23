@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./CarRentalExtraCharges'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.CarRental = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.CarRentalExtraCharges);
+    root.FirstDataGateway.CarRental = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.CarRentalExtraCharges);
   }
 }(this, function(ApiClient, CarRentalExtraCharges) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The CarRental model module.
    * @module model/CarRental
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

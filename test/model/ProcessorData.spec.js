@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.ProcessorData();
+    instance = new FirstDataGateway.ProcessorData();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('ProcessorData', function() {
     it('should create an instance of ProcessorData', function() {
       // uncomment below and update the code to test ProcessorData
-      //var instane = new FirstApiSdk.ProcessorData();
-      //expect(instance).to.be.a(FirstApiSdk.ProcessorData);
+      //var instane = new FirstDataGateway.ProcessorData();
+      //expect(instance).to.be.a(FirstDataGateway.ProcessorData);
     });
 
     it('should have the property responseCode (base name: "responseCode")', function() {
       // uncomment below and update the code to test the property responseCode
-      //var instane = new FirstApiSdk.ProcessorData();
+      //var instane = new FirstDataGateway.ProcessorData();
       //expect(instance).to.be();
     });
 
     it('should have the property responseMessage (base name: "responseMessage")', function() {
       // uncomment below and update the code to test the property responseMessage
-      //var instane = new FirstApiSdk.ProcessorData();
+      //var instane = new FirstDataGateway.ProcessorData();
       //expect(instance).to.be();
     });
 
     it('should have the property approvalCode (base name: "approvalCode")', function() {
       // uncomment below and update the code to test the property approvalCode
-      //var instane = new FirstApiSdk.ProcessorData();
+      //var instane = new FirstDataGateway.ProcessorData();
       //expect(instance).to.be();
     });
 

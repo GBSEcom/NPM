@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.CarRental();
+    instance = new FirstDataGateway.CarRental();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,55 +52,55 @@
   describe('CarRental', function() {
     it('should create an instance of CarRental', function() {
       // uncomment below and update the code to test CarRental
-      //var instane = new FirstApiSdk.CarRental();
-      //expect(instance).to.be.a(FirstApiSdk.CarRental);
+      //var instane = new FirstDataGateway.CarRental();
+      //expect(instance).to.be.a(FirstDataGateway.CarRental);
     });
 
     it('should have the property agreementNumber (base name: "agreementNumber")', function() {
       // uncomment below and update the code to test the property agreementNumber
-      //var instane = new FirstApiSdk.CarRental();
+      //var instane = new FirstDataGateway.CarRental();
       //expect(instance).to.be();
     });
 
     it('should have the property renterName (base name: "renterName")', function() {
       // uncomment below and update the code to test the property renterName
-      //var instane = new FirstApiSdk.CarRental();
+      //var instane = new FirstDataGateway.CarRental();
       //expect(instance).to.be();
     });
 
     it('should have the property returnCity (base name: "returnCity")', function() {
       // uncomment below and update the code to test the property returnCity
-      //var instane = new FirstApiSdk.CarRental();
+      //var instane = new FirstDataGateway.CarRental();
       //expect(instance).to.be();
     });
 
     it('should have the property returnDate (base name: "returnDate")', function() {
       // uncomment below and update the code to test the property returnDate
-      //var instane = new FirstApiSdk.CarRental();
+      //var instane = new FirstDataGateway.CarRental();
       //expect(instance).to.be();
     });
 
     it('should have the property pickupDate (base name: "pickupDate")', function() {
       // uncomment below and update the code to test the property pickupDate
-      //var instane = new FirstApiSdk.CarRental();
+      //var instane = new FirstDataGateway.CarRental();
       //expect(instance).to.be();
     });
 
     it('should have the property rentalClassId (base name: "rentalClassId")', function() {
       // uncomment below and update the code to test the property rentalClassId
-      //var instane = new FirstApiSdk.CarRental();
+      //var instane = new FirstDataGateway.CarRental();
       //expect(instance).to.be();
     });
 
     it('should have the property extraCharges (base name: "extraCharges")', function() {
       // uncomment below and update the code to test the property extraCharges
-      //var instane = new FirstApiSdk.CarRental();
+      //var instane = new FirstDataGateway.CarRental();
       //expect(instance).to.be();
     });
 
     it('should have the property noShowIndicator (base name: "noShowIndicator")', function() {
       // uncomment below and update the code to test the property noShowIndicator
-      //var instane = new FirstApiSdk.CarRental();
+      //var instane = new FirstDataGateway.CarRental();
       //expect(instance).to.be();
     });
 

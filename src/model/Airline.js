@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./AirlineAncillaryServiceCategory'), require('./AirlineTravelRoute'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.Airline = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.AirlineAncillaryServiceCategory, root.FirstApiSdk.AirlineTravelRoute);
+    root.FirstDataGateway.Airline = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.AirlineAncillaryServiceCategory, root.FirstDataGateway.AirlineTravelRoute);
   }
 }(this, function(ApiClient, AirlineAncillaryServiceCategory, AirlineTravelRoute) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The Airline model module.
    * @module model/Airline
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

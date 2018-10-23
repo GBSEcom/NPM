@@ -1,4 +1,4 @@
-# FirstApiSdk.PaymentCard
+# FirstDataGateway.PaymentCard
 
 ## Properties
 Name | Type | Description | Notes

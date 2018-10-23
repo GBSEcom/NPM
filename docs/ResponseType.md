@@ -1,4 +1,4 @@
-# FirstApiSdk.ResponseType
+# FirstDataGateway.ResponseType
 
 ## Enum
 

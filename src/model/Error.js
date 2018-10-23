@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./ErrorDetails'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.Error = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.ErrorDetails);
+    root.FirstDataGateway.Error = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.ErrorDetails);
   }
 }(this, function(ApiClient, ErrorDetails) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The Error model module.
    * @module model/Error
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

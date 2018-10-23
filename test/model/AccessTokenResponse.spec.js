@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.AccessTokenResponse();
+    instance = new FirstDataGateway.AccessTokenResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,31 +52,31 @@
   describe('AccessTokenResponse', function() {
     it('should create an instance of AccessTokenResponse', function() {
       // uncomment below and update the code to test AccessTokenResponse
-      //var instane = new FirstApiSdk.AccessTokenResponse();
-      //expect(instance).to.be.a(FirstApiSdk.AccessTokenResponse);
+      //var instane = new FirstDataGateway.AccessTokenResponse();
+      //expect(instance).to.be.a(FirstDataGateway.AccessTokenResponse);
     });
 
     it('should have the property accessToken (base name: "accessToken")', function() {
       // uncomment below and update the code to test the property accessToken
-      //var instane = new FirstApiSdk.AccessTokenResponse();
+      //var instane = new FirstDataGateway.AccessTokenResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property clientRequestId (base name: "clientRequestId")', function() {
       // uncomment below and update the code to test the property clientRequestId
-      //var instane = new FirstApiSdk.AccessTokenResponse();
+      //var instane = new FirstDataGateway.AccessTokenResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property apiTraceId (base name: "apiTraceId")', function() {
       // uncomment below and update the code to test the property apiTraceId
-      //var instane = new FirstApiSdk.AccessTokenResponse();
+      //var instane = new FirstDataGateway.AccessTokenResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property requestStatus (base name: "requestStatus")', function() {
       // uncomment below and update the code to test the property requestStatus
-      //var instane = new FirstApiSdk.AccessTokenResponse();
+      //var instane = new FirstDataGateway.AccessTokenResponse();
       //expect(instance).to.be();
     });
 

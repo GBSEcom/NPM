@@ -1,4 +1,4 @@
-# FirstApiSdk.AccessTokenResponse
+# FirstDataGateway.AccessTokenResponse
 
 ## Properties
 Name | Type | Description | Notes

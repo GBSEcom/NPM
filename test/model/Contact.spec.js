@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.Contact();
+    instance = new FirstDataGateway.Contact();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,31 +52,31 @@
   describe('Contact', function() {
     it('should create an instance of Contact', function() {
       // uncomment below and update the code to test Contact
-      //var instane = new FirstApiSdk.Contact();
-      //expect(instance).to.be.a(FirstApiSdk.Contact);
+      //var instane = new FirstDataGateway.Contact();
+      //expect(instance).to.be.a(FirstDataGateway.Contact);
     });
 
     it('should have the property phone (base name: "phone")', function() {
       // uncomment below and update the code to test the property phone
-      //var instane = new FirstApiSdk.Contact();
+      //var instane = new FirstDataGateway.Contact();
       //expect(instance).to.be();
     });
 
     it('should have the property mobilePhone (base name: "mobilePhone")', function() {
       // uncomment below and update the code to test the property mobilePhone
-      //var instane = new FirstApiSdk.Contact();
+      //var instane = new FirstDataGateway.Contact();
       //expect(instance).to.be();
     });
 
     it('should have the property fax (base name: "fax")', function() {
       // uncomment below and update the code to test the property fax
-      //var instane = new FirstApiSdk.Contact();
+      //var instane = new FirstDataGateway.Contact();
       //expect(instance).to.be();
     });
 
     it('should have the property email (base name: "email")', function() {
       // uncomment below and update the code to test the property email
-      //var instane = new FirstApiSdk.Contact();
+      //var instane = new FirstDataGateway.Contact();
       //expect(instance).to.be();
     });
 

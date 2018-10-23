@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.PaymentSchedulesRequest();
+    instance = new FirstDataGateway.PaymentSchedulesRequest();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,91 +52,91 @@
   describe('PaymentSchedulesRequest', function() {
     it('should create an instance of PaymentSchedulesRequest', function() {
       // uncomment below and update the code to test PaymentSchedulesRequest
-      //var instane = new FirstApiSdk.PaymentSchedulesRequest();
-      //expect(instance).to.be.a(FirstApiSdk.PaymentSchedulesRequest);
+      //var instane = new FirstDataGateway.PaymentSchedulesRequest();
+      //expect(instance).to.be.a(FirstDataGateway.PaymentSchedulesRequest);
     });
 
     it('should have the property storeId (base name: "storeId")', function() {
       // uncomment below and update the code to test the property storeId
-      //var instane = new FirstApiSdk.PaymentSchedulesRequest();
+      //var instane = new FirstDataGateway.PaymentSchedulesRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property referenceOrderId (base name: "referenceOrderId")', function() {
       // uncomment below and update the code to test the property referenceOrderId
-      //var instane = new FirstApiSdk.PaymentSchedulesRequest();
+      //var instane = new FirstDataGateway.PaymentSchedulesRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property startDate (base name: "startDate")', function() {
       // uncomment below and update the code to test the property startDate
-      //var instane = new FirstApiSdk.PaymentSchedulesRequest();
+      //var instane = new FirstDataGateway.PaymentSchedulesRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property numberOfPayments (base name: "numberOfPayments")', function() {
       // uncomment below and update the code to test the property numberOfPayments
-      //var instane = new FirstApiSdk.PaymentSchedulesRequest();
+      //var instane = new FirstDataGateway.PaymentSchedulesRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property maximumFailures (base name: "maximumFailures")', function() {
       // uncomment below and update the code to test the property maximumFailures
-      //var instane = new FirstApiSdk.PaymentSchedulesRequest();
+      //var instane = new FirstDataGateway.PaymentSchedulesRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property invoiceNumber (base name: "invoiceNumber")', function() {
       // uncomment below and update the code to test the property invoiceNumber
-      //var instane = new FirstApiSdk.PaymentSchedulesRequest();
+      //var instane = new FirstDataGateway.PaymentSchedulesRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property poNumber (base name: "poNumber")', function() {
       // uncomment below and update the code to test the property poNumber
-      //var instane = new FirstApiSdk.PaymentSchedulesRequest();
+      //var instane = new FirstDataGateway.PaymentSchedulesRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property transactionOrigin (base name: "transactionOrigin")', function() {
       // uncomment below and update the code to test the property transactionOrigin
-      //var instane = new FirstApiSdk.PaymentSchedulesRequest();
+      //var instane = new FirstDataGateway.PaymentSchedulesRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property dynamicMerchantName (base name: "dynamicMerchantName")', function() {
       // uncomment below and update the code to test the property dynamicMerchantName
-      //var instane = new FirstApiSdk.PaymentSchedulesRequest();
+      //var instane = new FirstDataGateway.PaymentSchedulesRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property frequency (base name: "frequency")', function() {
       // uncomment below and update the code to test the property frequency
-      //var instane = new FirstApiSdk.PaymentSchedulesRequest();
+      //var instane = new FirstDataGateway.PaymentSchedulesRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property paymentMethod (base name: "paymentMethod")', function() {
       // uncomment below and update the code to test the property paymentMethod
-      //var instane = new FirstApiSdk.PaymentSchedulesRequest();
+      //var instane = new FirstDataGateway.PaymentSchedulesRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property amount (base name: "amount")', function() {
       // uncomment below and update the code to test the property amount
-      //var instane = new FirstApiSdk.PaymentSchedulesRequest();
+      //var instane = new FirstDataGateway.PaymentSchedulesRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property clientLocale (base name: "clientLocale")', function() {
       // uncomment below and update the code to test the property clientLocale
-      //var instane = new FirstApiSdk.PaymentSchedulesRequest();
+      //var instane = new FirstDataGateway.PaymentSchedulesRequest();
       //expect(instance).to.be();
     });
 
     it('should have the property orderId (base name: "orderId")', function() {
       // uncomment below and update the code to test the property orderId
-      //var instane = new FirstApiSdk.PaymentSchedulesRequest();
+      //var instane = new FirstDataGateway.PaymentSchedulesRequest();
       //expect(instance).to.be();
     });
 

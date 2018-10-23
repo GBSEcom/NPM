@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.SepaMandate();
+    instance = new FirstDataGateway.SepaMandate();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,31 +52,31 @@
   describe('SepaMandate', function() {
     it('should create an instance of SepaMandate', function() {
       // uncomment below and update the code to test SepaMandate
-      //var instane = new FirstApiSdk.SepaMandate();
-      //expect(instance).to.be.a(FirstApiSdk.SepaMandate);
+      //var instane = new FirstDataGateway.SepaMandate();
+      //expect(instance).to.be.a(FirstDataGateway.SepaMandate);
     });
 
     it('should have the property reference (base name: "reference")', function() {
       // uncomment below and update the code to test the property reference
-      //var instane = new FirstApiSdk.SepaMandate();
+      //var instane = new FirstDataGateway.SepaMandate();
       //expect(instance).to.be();
     });
 
     it('should have the property url (base name: "url")', function() {
       // uncomment below and update the code to test the property url
-      //var instane = new FirstApiSdk.SepaMandate();
+      //var instane = new FirstDataGateway.SepaMandate();
       //expect(instance).to.be();
     });
 
     it('should have the property signatureDate (base name: "signatureDate")', function() {
       // uncomment below and update the code to test the property signatureDate
-      //var instane = new FirstApiSdk.SepaMandate();
+      //var instane = new FirstDataGateway.SepaMandate();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new FirstApiSdk.SepaMandate();
+      //var instane = new FirstDataGateway.SepaMandate();
       //expect(instance).to.be();
     });
 

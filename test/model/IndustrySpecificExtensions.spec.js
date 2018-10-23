@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.IndustrySpecificExtensions();
+    instance = new FirstDataGateway.IndustrySpecificExtensions();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('IndustrySpecificExtensions', function() {
     it('should create an instance of IndustrySpecificExtensions', function() {
       // uncomment below and update the code to test IndustrySpecificExtensions
-      //var instane = new FirstApiSdk.IndustrySpecificExtensions();
-      //expect(instance).to.be.a(FirstApiSdk.IndustrySpecificExtensions);
+      //var instane = new FirstDataGateway.IndustrySpecificExtensions();
+      //expect(instance).to.be.a(FirstDataGateway.IndustrySpecificExtensions);
     });
 
     it('should have the property airline (base name: "airline")', function() {
       // uncomment below and update the code to test the property airline
-      //var instane = new FirstApiSdk.IndustrySpecificExtensions();
+      //var instane = new FirstDataGateway.IndustrySpecificExtensions();
       //expect(instance).to.be();
     });
 
     it('should have the property lodging (base name: "lodging")', function() {
       // uncomment below and update the code to test the property lodging
-      //var instane = new FirstApiSdk.IndustrySpecificExtensions();
+      //var instane = new FirstDataGateway.IndustrySpecificExtensions();
       //expect(instance).to.be();
     });
 
     it('should have the property carRental (base name: "carRental")', function() {
       // uncomment below and update the code to test the property carRental
-      //var instane = new FirstApiSdk.IndustrySpecificExtensions();
+      //var instane = new FirstDataGateway.IndustrySpecificExtensions();
       //expect(instance).to.be();
     });
 

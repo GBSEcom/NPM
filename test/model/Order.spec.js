@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.Order();
+    instance = new FirstDataGateway.Order();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,25 +52,25 @@
   describe('Order', function() {
     it('should create an instance of Order', function() {
       // uncomment below and update the code to test Order
-      //var instane = new FirstApiSdk.Order();
-      //expect(instance).to.be.a(FirstApiSdk.Order);
+      //var instane = new FirstDataGateway.Order();
+      //expect(instance).to.be.a(FirstDataGateway.Order);
     });
 
     it('should have the property orderId (base name: "orderId")', function() {
       // uncomment below and update the code to test the property orderId
-      //var instane = new FirstApiSdk.Order();
+      //var instane = new FirstDataGateway.Order();
       //expect(instance).to.be();
     });
 
     it('should have the property billing (base name: "billing")', function() {
       // uncomment below and update the code to test the property billing
-      //var instane = new FirstApiSdk.Order();
+      //var instane = new FirstDataGateway.Order();
       //expect(instance).to.be();
     });
 
     it('should have the property shipping (base name: "shipping")', function() {
       // uncomment below and update the code to test the property shipping
-      //var instane = new FirstApiSdk.Order();
+      //var instane = new FirstDataGateway.Order();
       //expect(instance).to.be();
     });
 

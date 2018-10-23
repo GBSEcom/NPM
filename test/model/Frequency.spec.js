@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.Frequency();
+    instance = new FirstDataGateway.Frequency();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('Frequency', function() {
     it('should create an instance of Frequency', function() {
       // uncomment below and update the code to test Frequency
-      //var instane = new FirstApiSdk.Frequency();
-      //expect(instance).to.be.a(FirstApiSdk.Frequency);
+      //var instane = new FirstDataGateway.Frequency();
+      //expect(instance).to.be.a(FirstDataGateway.Frequency);
     });
 
     it('should have the property every (base name: "every")', function() {
       // uncomment below and update the code to test the property every
-      //var instane = new FirstApiSdk.Frequency();
+      //var instane = new FirstDataGateway.Frequency();
       //expect(instance).to.be();
     });
 
     it('should have the property unit (base name: "unit")', function() {
       // uncomment below and update the code to test the property unit
-      //var instane = new FirstApiSdk.Frequency();
+      //var instane = new FirstDataGateway.Frequency();
       //expect(instance).to.be();
     });
 

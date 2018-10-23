@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.ClientLocale = factory(root.FirstApiSdk.ApiClient);
+    root.FirstDataGateway.ClientLocale = factory(root.FirstDataGateway.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The ClientLocale model module.
    * @module model/ClientLocale
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

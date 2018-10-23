@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/ErrorResponse'), require('../model/PrimaryTransaction'), require('../model/SecondaryTransaction'), require('../model/TransactionResponse'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.PaymentApi = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.ErrorResponse, root.FirstApiSdk.PrimaryTransaction, root.FirstApiSdk.SecondaryTransaction, root.FirstApiSdk.TransactionResponse);
+    root.FirstDataGateway.PaymentApi = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.ErrorResponse, root.FirstDataGateway.PrimaryTransaction, root.FirstDataGateway.SecondaryTransaction, root.FirstDataGateway.TransactionResponse);
   }
 }(this, function(ApiClient, ErrorResponse, PrimaryTransaction, SecondaryTransaction, TransactionResponse) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * Payment service.
    * @module api/PaymentApi
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Amount'), require('./SplitShipment'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.SecondaryTransaction = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.Amount, root.FirstApiSdk.SplitShipment);
+    root.FirstDataGateway.SecondaryTransaction = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.Amount, root.FirstDataGateway.SplitShipment);
   }
 }(this, function(ApiClient, Amount, SplitShipment) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The SecondaryTransaction model module.
    * @module model/SecondaryTransaction
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

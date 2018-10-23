@@ -22,15 +22,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.FirstApiSdk);
+    factory(root.expect, root.FirstDataGateway);
   }
-}(this, function(expect, FirstApiSdk) {
+}(this, function(expect, FirstDataGateway) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new FirstApiSdk.Expiration();
+    instance = new FirstDataGateway.Expiration();
   });
 
   var getProperty = function(object, getter, property) {
@@ -52,19 +52,19 @@
   describe('Expiration', function() {
     it('should create an instance of Expiration', function() {
       // uncomment below and update the code to test Expiration
-      //var instane = new FirstApiSdk.Expiration();
-      //expect(instance).to.be.a(FirstApiSdk.Expiration);
+      //var instane = new FirstDataGateway.Expiration();
+      //expect(instance).to.be.a(FirstDataGateway.Expiration);
     });
 
     it('should have the property month (base name: "month")', function() {
       // uncomment below and update the code to test the property month
-      //var instane = new FirstApiSdk.Expiration();
+      //var instane = new FirstDataGateway.Expiration();
       //expect(instance).to.be();
     });
 
     it('should have the property year (base name: "year")', function() {
       // uncomment below and update the code to test the property year
-      //var instane = new FirstApiSdk.Expiration();
+      //var instane = new FirstDataGateway.Expiration();
       //expect(instance).to.be();
     });
 

@@ -1,4 +1,4 @@
-# FirstApiSdk.InstallmentOptions
+# FirstDataGateway.InstallmentOptions
 
 ## Properties
 Name | Type | Description | Notes

@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./PaymentMethod'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.CardVerificationsTransaction = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.PaymentMethod);
+    root.FirstDataGateway.CardVerificationsTransaction = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.PaymentMethod);
   }
 }(this, function(ApiClient, PaymentMethod) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The CardVerificationsTransaction model module.
    * @module model/CardVerificationsTransaction
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

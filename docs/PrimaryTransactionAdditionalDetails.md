@@ -1,4 +1,4 @@
-# FirstApiSdk.PrimaryTransactionAdditionalDetails
+# FirstDataGateway.PrimaryTransactionAdditionalDetails
 
 ## Properties
 Name | Type | Description | Notes

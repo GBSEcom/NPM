@@ -1,4 +1,4 @@
-# FirstApiSdk.Frequency
+# FirstDataGateway.Frequency
 
 ## Properties
 Name | Type | Description | Notes

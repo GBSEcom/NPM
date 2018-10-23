@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('../model/ErrorResponse'), require('../model/SecondaryTransaction'), require('../model/TransactionResponse'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.OrderApi = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.ErrorResponse, root.FirstApiSdk.SecondaryTransaction, root.FirstApiSdk.TransactionResponse);
+    root.FirstDataGateway.OrderApi = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.ErrorResponse, root.FirstDataGateway.SecondaryTransaction, root.FirstDataGateway.TransactionResponse);
   }
 }(this, function(ApiClient, ErrorResponse, SecondaryTransaction, TransactionResponse) {
   'use strict';
@@ -33,7 +33,7 @@
   /**
    * Order service.
    * @module api/OrderApi
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

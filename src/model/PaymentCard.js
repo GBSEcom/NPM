@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Expiration'), require('./PaymentCardAuthenticationRequest'), require('./PaymentCardAuthenticationResult'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.PaymentCard = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.Expiration, root.FirstApiSdk.PaymentCardAuthenticationRequest, root.FirstApiSdk.PaymentCardAuthenticationResult);
+    root.FirstDataGateway.PaymentCard = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.Expiration, root.FirstDataGateway.PaymentCardAuthenticationRequest, root.FirstDataGateway.PaymentCardAuthenticationResult);
   }
 }(this, function(ApiClient, Expiration, PaymentCardAuthenticationRequest, PaymentCardAuthenticationResult) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The PaymentCard model module.
    * @module model/PaymentCard
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**

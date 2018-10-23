@@ -22,10 +22,10 @@
     module.exports = factory(require('../ApiClient'), require('./Amount'), require('./BasketItem'), require('./IndustrySpecificExtensions'), require('./Order'), require('./PaymentMethod'), require('./PrimaryTransactionAdditionalDetails'), require('./SplitShipment'), require('./StoredCredential'), require('./TransactionType'));
   } else {
     // Browser globals (root is window)
-    if (!root.FirstApiSdk) {
-      root.FirstApiSdk = {};
+    if (!root.FirstDataGateway) {
+      root.FirstDataGateway = {};
     }
-    root.FirstApiSdk.PrimaryTransaction = factory(root.FirstApiSdk.ApiClient, root.FirstApiSdk.Amount, root.FirstApiSdk.BasketItem, root.FirstApiSdk.IndustrySpecificExtensions, root.FirstApiSdk.Order, root.FirstApiSdk.PaymentMethod, root.FirstApiSdk.PrimaryTransactionAdditionalDetails, root.FirstApiSdk.SplitShipment, root.FirstApiSdk.StoredCredential, root.FirstApiSdk.TransactionType);
+    root.FirstDataGateway.PrimaryTransaction = factory(root.FirstDataGateway.ApiClient, root.FirstDataGateway.Amount, root.FirstDataGateway.BasketItem, root.FirstDataGateway.IndustrySpecificExtensions, root.FirstDataGateway.Order, root.FirstDataGateway.PaymentMethod, root.FirstDataGateway.PrimaryTransactionAdditionalDetails, root.FirstDataGateway.SplitShipment, root.FirstDataGateway.StoredCredential, root.FirstDataGateway.TransactionType);
   }
 }(this, function(ApiClient, Amount, BasketItem, IndustrySpecificExtensions, Order, PaymentMethod, PrimaryTransactionAdditionalDetails, SplitShipment, StoredCredential, TransactionType) {
   'use strict';
@@ -36,7 +36,7 @@
   /**
    * The PrimaryTransaction model module.
    * @module model/PrimaryTransaction
-   * @version 6.3.0
+   * @version 1.0.0
    */
 
   /**
