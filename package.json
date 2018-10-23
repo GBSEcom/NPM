@@ -1,6 +1,6 @@
 {
   "name": "@firstdata/first-data-gateway",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "JavaScript SDK to be used with a First Data Gateway account. This SDK has been created and packaged to offer the easiest way to integrate your application into the First Data Gateway. This SDK gives you the ability to run transactions such as sales, preauthorizations, postauthorizations, credits, voids, and returns; transaction inquiries; setting up scheduled payments and much more.",
   "license": "MIT",
   "main": "src/index.js",
