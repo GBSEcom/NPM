@@ -9,7 +9,7 @@ Payment Gateway API for payment processing. Version 6.5
 ## Installation
 
 ```shell
-    npm install GBSEcom/NPM --save --save-exact
+    npm install @firstdata/first-data-gateway --save --save-exact
 ```
 
 ## Reference Documentation
@@ -33,7 +33,7 @@ import {
   IConfiguration,
   IClientFactory,
   IPaymentApi,
-} from "firstapi-sdk";
+} from "@firstdata/first-data-gateway";
 
 const getPaymentClient = (): IPaymentApi => {
   const credentials: ICredentials = {
