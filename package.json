@@ -1,29 +1,31 @@
 {
   "name": "@firstdata/first-data-gateway",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "JavaScript SDK to be used with a First Data Gateway account. This SDK has been created and packaged to offer the easiest way to integrate your application into the First Data Gateway. This SDK gives you the ability to run transactions such as sales, preauthorizations, postauthorizations, credits, voids, and returns; transaction inquiries; setting up scheduled payments and much more.",
   "license": "MIT",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "mocha --compilers js:babel-core/register --recursive"
+  "main": "build/index.js",
+  "bugs": {
+    "url": "https://github.com/GBSEcom/NPM/issues"
   },
-  "browser": {
-    "fs": false
+  "engines": {
+    "node": "10.14.1"
+  },
+  "scripts": {
+    "build": "tsc --build tsconfig.json"
   },
   "dependencies": {
-    "babel": "^6.23.0",
-    "babel-cli": "^6.26.0",
-    "base-64": "^0.1.0",
-    "crypto-js": "^3.1.9-1",
-    "superagent": "3.5.2",
-    "uuid": "^3.2.1"
+    "axios": "0.18.0",
+    "crypto-js": "3.1.9-1",
+    "uuid": "3.3.2"
   },
   "devDependencies": {
-    "babel-core": "6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "expect.js": "~0.3.1",
-    "mocha": "~2.3.4",
-    "sinon": "1.17.3"
+    "@types/crypto-js": "3.1.43",
+    "@types/js-base64": "2.3.1",
+    "@types/uuid": "3.4.4",
+    "typescript": "3.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GBSEcom/NPM.git"
   }
 }
