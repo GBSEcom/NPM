@@ -1,9 +1,7 @@
 import globalAxios, {AxiosInstance} from "axios";
 import * as uuidv4 from "uuid/v4";
-//import * as HmacSHA256 from "crypto-js/hmac-sha256";
 import {HmacSHA256} from "crypto-js";
 import * as Base64 from "crypto-js/enc-base64";
-import {Configuration as IOpenApiConfig} from "../openapi/configuration";
 import {ClientFactory, IClientFactory} from "./factory";
 
 interface ICredentials {

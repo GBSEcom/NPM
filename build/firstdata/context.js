@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const axios_1 = require("axios");
 const uuidv4 = require("uuid/v4");
-//import * as HmacSHA256 from "crypto-js/hmac-sha256";
 const crypto_js_1 = require("crypto-js");
 const Base64 = require("crypto-js/enc-base64");
 const factory_1 = require("./factory");

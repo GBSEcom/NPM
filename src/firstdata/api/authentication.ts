@@ -1,8 +1,5 @@
 import {AxiosPromise} from "axios";
-import {
-  AuthenticationApi as Generated,
-  AuthenticationApiInterface as IGenerated,
-} from "../../openapi/api";
+import {AuthenticationApi as Generated, AuthenticationApiInterface as IGenerated} from "../../openapi/api";
 import {IContext} from "../context";
 import {AccessTokenResponse} from "../models";
 import {BaseApi} from "./base";
@@ -21,7 +18,7 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
 
   public getAccessToken(): AxiosPromise<AccessTokenResponse> {
     const headers = this.context.genHeaders();
-    return this.client.v1AuthenticationAccessTokensPost(
+    return this.client.authenticationAccessTokensPost(
       headers.contentType,
       headers.clientRequestId,
       headers.apiKey,

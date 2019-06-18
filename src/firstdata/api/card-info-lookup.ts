@@ -1,15 +1,8 @@
 import {AxiosPromise} from "axios";
 import {BaseApi} from "./base";
-import {
-  CardInfoLookupApi as Generated,
-  CardInfoLookupApiInterface as IGenerated,
-} from "../../openapi/api";
+import {CardInfoLookupApi as Generated, CardInfoLookupApiInterface as IGenerated} from "../../openapi/api";
 import {IContext} from "../context";
-import {
-  ApiField,
-  CardInfoLookupRequest,
-  CardInfoLookupResponse,
-} from "../models";
+import {ApiField, CardInfoLookupRequest, CardInfoLookupResponse} from "../models";
 
 type CardInfoLookupParams =
   ApiField<"region"> &
@@ -23,7 +16,6 @@ interface IWrapper {
      * @throws {RequiredError}
      */
   cardInfoLookup(params: CardInfoLookupParams): AxiosPromise<CardInfoLookupResponse>;
-
 }
 
 class Wrapper extends BaseApi<IGenerated> implements IWrapper {

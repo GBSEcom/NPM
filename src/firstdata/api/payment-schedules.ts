@@ -1,9 +1,6 @@
 import {AxiosPromise} from "axios";
 import {BaseApi} from "./base";
-import {
-  PaymentSchedulesApi as Generated,
-  PaymentSchedulesApiInterface as IGenerated,
-} from "../../openapi/api";
+import {PaymentSchedulesApi as Generated, PaymentSchedulesApiInterface as IGenerated} from "../../openapi/api";
 import {IContext} from "../context";
 import {
   ApiField,
@@ -104,7 +101,7 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
   }
 
   public updatePaymentSchedule(params: UpdatePaymentScheduleParams): AxiosPromise<PaymentSchedulesResponse> {
-    const headers = this.context.genHeaders();
+    const headers = this.context.genHeaders(params.payload);
     return this.client.updatePaymentSchedule(
       headers.contentType,
       headers.clientRequestId,

@@ -1,15 +1,8 @@
 import {AxiosPromise} from "axios";
 import {BaseApi} from "./base";
-import {
-  PaymentURLApi as Generated,
-  PaymentURLApiInterface as IGenerated,
-} from "../../openapi/api";
+import {PaymentURLApi as Generated, PaymentURLApiInterface as IGenerated} from "../../openapi/api";
 import {IContext} from "../context";
-import {
-  ApiField,
-  PaymentUrlRequest,
-  PaymentUrlResponse,
-} from "../models";
+import {ApiField, PaymentUrlRequest, PaymentUrlResponse} from "../models";
 
 type CreatePaymentUrlParams =
   ApiField<"region"> &
@@ -24,7 +17,6 @@ interface IWrapper {
      * @throws {RequiredError}
      */
     createPaymentUrl(params: CreatePaymentUrlParams): AxiosPromise<PaymentUrlResponse>;
-
 }
 
 class Wrapper extends BaseApi<IGenerated> implements IWrapper {

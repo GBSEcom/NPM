@@ -1,15 +1,8 @@
 import {AxiosPromise} from "axios";
 import {BaseApi} from "./base";
-import {
-  CurrencyConversionApi as Generated,
-  CurrencyConversionApiInterface as IGenerated,
-} from "../../openapi/api";
+import {CurrencyConversionApi as Generated, CurrencyConversionApiInterface as IGenerated} from "../../openapi/api";
 import {IContext} from "../context";
-import {
-  ApiField,
-  ExchangeRateRequest,
-  ExchangeRateResponse,
-} from "../models";
+import {ApiField, ExchangeRateRequest, ExchangeRateResponse} from "../models";
 
 type ExchangeRateParams =
   ApiField<"region"> &
@@ -23,7 +16,6 @@ interface IWrapper {
      * @throws {RequiredError}
      */
     getExchangeRate(params: ExchangeRateParams): AxiosPromise<ExchangeRateResponse>;
-
 }
 
 class Wrapper extends BaseApi<IGenerated> implements IWrapper {

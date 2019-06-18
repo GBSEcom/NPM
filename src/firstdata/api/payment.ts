@@ -1,13 +1,10 @@
 import {AxiosPromise} from "axios";
 import {BaseApi} from "./base";
-import {
-  PaymentApi as Generated,
-  PaymentApiInterface as IGenerated,
-} from "../../openapi/api";
+import {PaymentApi as Generated, PaymentApiInterface as IGenerated} from "../../openapi/api";
 import {IContext} from "../context";
 import {
   ApiField,
-  AuthenticationResponseVerificationRequest,
+  AuthenticationVerificationRequest,
   PrimaryTransaction,
   SecondaryTransaction,
   TransactionResponse,
@@ -30,7 +27,7 @@ type PrimaryTransactionParams =
 type FinalizeTransactionParams =
   ApiField<"region"> &
   ApiField<"transactionId"> &
-  ApiField<"payload", AuthenticationResponseVerificationRequest>;
+  ApiField<"payload", AuthenticationVerificationRequest>;
 
 interface IWrapper {
     /**
@@ -42,28 +39,20 @@ interface IWrapper {
     finalizeSecureTransaction(params: FinalizeTransactionParams): AxiosPromise<TransactionResponse>;
 
     /**
-     * Used to capture/complete an existing transaction. Partial postauths are allowed.
-     * @summary Capture/complete a transaction.
-     * @param {SecondaryTxPaymentParams} params
-     * @throws {RequiredError}
-     */
-    performPaymentPostAuthorisation(params: SecondaryTxPaymentParams): AxiosPromise<TransactionResponse>;
-
-    /**
      * Use this to originate a financial transaction, like a sale, preauthorization, or credit.
      * @summary Generate a primary transaction.
      * @param {PrimaryTransactionParams} params
      * @throws {RequiredError}
      */
-    primaryPaymentTransaction(params: PrimaryTransactionParams): AxiosPromise<TransactionResponse>;
+    primaryTransaction(params: PrimaryTransactionParams): AxiosPromise<TransactionResponse>;
 
     /**
-     * Use this to return/refund an existing transaction.  Partial returns are allowed.
-     * @summary Return/refund a transaction.
+     * Use this to perform a void, postAuth or return secondary transaction. Partial postAuths and returns are allowed.
+     * @summary Perform a secondary transaction.
      * @param {SecondaryTxPaymentParams} params
      * @throws {RequiredError}
      */
-    returnTransaction(params: SecondaryTxPaymentParams): AxiosPromise<TransactionResponse>;
+    secondaryTransaction(params: SecondaryTxPaymentParams): AxiosPromise<TransactionResponse>;
 
     /**
      * Use this query to get the current state of an existing transaction.
@@ -72,15 +61,6 @@ interface IWrapper {
      * @throws {RequiredError}
      */
     transactionInquiry(params: PaymentParams): AxiosPromise<TransactionResponse>;
-
-    /**
-     * Use this to reverse a postauth/completion, credit, preauth, or sale.
-     * @summary Reverse a previous action on an existing transaction.
-     * @param {PaymentParams} params
-     * @throws {RequiredError}
-     */
-    voidTransaction(params: PaymentParams): AxiosPromise<TransactionResponse>;
-
 }
 
 class Wrapper extends BaseApi<IGenerated> implements IWrapper {
@@ -100,24 +80,9 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
     );
   }
 
-  public performPaymentPostAuthorisation(params: SecondaryTxPaymentParams): AxiosPromise<TransactionResponse> {
+  public primaryTransaction(params: PrimaryTransactionParams): AxiosPromise<TransactionResponse> {
     const headers = this.context.genHeaders(params.payload);
-    return this.client.performPaymentPostAuthorisation(
-      headers.contentType,
-      headers.clientRequestId,
-      headers.apiKey,
-      headers.timestamp,
-      params.transactionId,
-      params.payload,
-      headers.messageSignature,
-      params.region || this.context.region,
-      params.storeId || this.context.storeId,
-    );
-  }
-
-  public primaryPaymentTransaction(params: PrimaryTransactionParams): AxiosPromise<TransactionResponse> {
-    const headers = this.context.genHeaders(params.payload);
-    return this.client.primaryPaymentTransaction(
+    return this.client.submitPrimaryTransaction(
       headers.contentType,
       headers.clientRequestId,
       headers.apiKey,
@@ -128,9 +93,9 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
     );
   }
 
-  public returnTransaction(params: SecondaryTxPaymentParams): AxiosPromise<TransactionResponse> {
+  public secondaryTransaction(params: SecondaryTxPaymentParams): AxiosPromise<TransactionResponse> {
     const headers = this.context.genHeaders(params.payload);
-    return this.client.returnTransaction(
+    return this.client.submitSecondaryTransaction(
       headers.contentType,
       headers.clientRequestId,
       headers.apiKey,
@@ -146,20 +111,6 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
   public transactionInquiry(params: PaymentParams): AxiosPromise<TransactionResponse> {
     const headers = this.context.genHeaders();
     return this.client.transactionInquiry(
-      headers.contentType,
-      headers.clientRequestId,
-      headers.apiKey,
-      headers.timestamp,
-      params.transactionId,
-      headers.messageSignature,
-      params.region || this.context.region,
-      params.storeId || this.context.storeId,
-    );
-  }
-
-  public voidTransaction(params: PaymentParams): AxiosPromise<TransactionResponse> {
-    const headers = this.context.genHeaders();
-    return this.client.voidTransaction(
       headers.contentType,
       headers.clientRequestId,
       headers.apiKey,

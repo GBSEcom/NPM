@@ -10,14 +10,14 @@ interface IWrapper {
     /**
      * Use this to create a payment token from a payment card.
      * @summary Create a payment token from a payment card.
-     * @param CreatePaymentTokenParams params
+     * @param {CreatePaymentTokenParams} params
      * @throws {RequiredError}
      */
     createPaymentToken(params: CreatePaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
     /**
      * Use this to delete a payment token.
      * @summary Delete a payment token.
-     * @param DeletePaymentTokenParams params
+     * @param {DeletePaymentTokenParams} params
      * @throws {RequiredError}
      */
     deletePaymentToken(params: DeletePaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;

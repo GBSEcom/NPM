@@ -1,15 +1,8 @@
 import {AxiosPromise} from "axios";
 import {BaseApi} from "./base";
-import {
-  FraudDetectApi as Generated,
-  FraudDetectApiInterface as IGenerated,
-} from "../../openapi/api";
+import {FraudDetectApi as Generated, FraudDetectApiInterface as IGenerated} from "../../openapi/api";
 import {IContext} from "../context";
-import {
-  ApiField,
-  ScoreOnlyRequest,
-  ScoreOnlyResponse,
-} from "../models";
+import {ApiField, ScoreOnlyRequest, ScoreOnlyResponse} from "../models";
 
 type ScoreOnlyParams =
   ApiField<"region"> &
@@ -23,7 +16,6 @@ interface IWrapper {
      * @throws {RequiredError}
      */
     scoreOnly(params: ScoreOnlyParams): AxiosPromise<ScoreOnlyResponse>;
-
 }
 
 class Wrapper extends BaseApi<IGenerated> implements IWrapper {

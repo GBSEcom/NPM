@@ -8,13 +8,9 @@ class Wrapper extends base_1.BaseApi {
         const headers = this.context.genHeaders();
         return this.client.orderInquiry(headers.contentType, headers.clientRequestId, headers.apiKey, headers.timestamp, params.orderId, headers.messageSignature, params.region || this.context.region, params.storeId || this.context.storeId);
     }
-    orderPostAuth(params) {
+    secondaryTransaction(params) {
         const headers = this.context.genHeaders(params.payload);
-        return this.client.orderPostAuth(headers.contentType, headers.clientRequestId, headers.apiKey, headers.timestamp, params.orderId, params.payload, headers.messageSignature, params.region || this.context.region, params.storeId || this.context.storeId);
-    }
-    orderReturnTransaction(params) {
-        const headers = this.context.genHeaders(params.payload);
-        return this.client.orderReturnTransaction(headers.contentType, headers.clientRequestId, headers.apiKey, headers.timestamp, params.orderId, params.payload, headers.messageSignature, params.region || this.context.region, params.storeId || this.context.storeId);
+        return this.client.submitSecondaryTransactionFromOrder(headers.contentType, headers.clientRequestId, headers.apiKey, headers.timestamp, params.orderId, params.payload, headers.messageSignature, params.region || this.context.region);
     }
 }
 exports.OrderApi = Wrapper;

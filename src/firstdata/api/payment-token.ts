@@ -1,15 +1,8 @@
 import {AxiosPromise} from "axios";
 import {BaseApi} from "./base";
-import {
-  PaymentTokenApi as Generated,
-  PaymentTokenApiInterface as IGenerated,
-} from "../../openapi/api";
+import {PaymentTokenApi as Generated, PaymentTokenApiInterface as IGenerated} from "../../openapi/api";
 import {IContext} from "../context";
-import {
-  ApiField,
-  PaymentTokenizationRequest,
-  PaymentTokenizationResponse,
-} from "../models";
+import {ApiField, PaymentTokenizationRequest, PaymentTokenizationResponse} from "../models";
 
 type PaymentTokenParams =
   ApiField<"region"> &
@@ -28,7 +21,7 @@ interface IWrapper {
     /**
      * Use this to create a payment token from a payment card.
      * @summary Create a payment token from a payment card.
-     * @param CreatePaymentTokenParams params
+     * @param {CreatePaymentTokenParams} params
      * @throws {RequiredError}
      */
     createPaymentToken(params: CreatePaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
@@ -36,11 +29,10 @@ interface IWrapper {
     /**
      * Use this to delete a payment token.
      * @summary Delete a payment token.
-     * @param DeletePaymentTokenParams params
+     * @param {DeletePaymentTokenParams} params
      * @throws {RequiredError}
      */
     deletePaymentToken(params: DeletePaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
-
 }
 
 class Wrapper extends BaseApi<IGenerated> implements IWrapper {
