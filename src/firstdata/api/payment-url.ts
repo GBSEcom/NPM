@@ -9,6 +9,7 @@ type CreatePaymentUrlParams =
   ApiField<"payload", PaymentUrlRequest>;
 
 
+
 interface IWrapper {
     /**
      * Use this to generate an embedding payment link.
@@ -17,6 +18,7 @@ interface IWrapper {
      * @throws {RequiredError}
      */
     createPaymentUrl(params: CreatePaymentUrlParams): AxiosPromise<PaymentUrlResponse>;
+
 }
 
 class Wrapper extends BaseApi<IGenerated> implements IWrapper {
@@ -40,4 +42,5 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
 export {IWrapper as IPaymentUrlApi};
 export {Wrapper as PaymentUrlApi};
 export {CreatePaymentUrlParams};
+
 

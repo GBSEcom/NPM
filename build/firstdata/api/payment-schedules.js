@@ -18,7 +18,7 @@ class Wrapper extends base_1.BaseApi {
     }
     updatePaymentSchedule(params) {
         const headers = this.context.genHeaders(params.payload);
-        return this.client.updatePaymentSchedule(headers.contentType, headers.clientRequestId, headers.apiKey, headers.timestamp, params.orderId, params.payload, headers.messageSignature, params.region || this.context.region, params.storeId || this.context.region);
+        return this.client.updatePaymentSchedule(headers.contentType, headers.clientRequestId, headers.apiKey, headers.timestamp, params.orderId, params.payload, headers.messageSignature, params.region || this.context.region);
     }
 }
 exports.PaymentSchedulesApi = Wrapper;

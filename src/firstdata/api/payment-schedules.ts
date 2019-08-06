@@ -110,8 +110,7 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
       params.orderId,
       params.payload,
       headers.messageSignature,
-      params.region || this.context.region,
-      params.storeId || this.context.region,
+      params.region || this.context.region
     );
   }
 }
