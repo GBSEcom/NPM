@@ -8,5 +8,13 @@ class Wrapper extends base_1.BaseApi {
         const headers = this.context.genHeaders(params.payload);
         return this.client.scoreOnly(headers.contentType, headers.clientRequestId, headers.apiKey, headers.timestamp, params.payload, headers.messageSignature, params.region || this.context.region);
     }
+    fraudClientRegistrationPost(params) {
+        const headers = this.context.genHeaders(params.payload);
+        return this.client.fraudClientRegistrationPost(headers.contentType, headers.clientRequestId, headers.apiKey, headers.timestamp, params.payload, headers.messageSignature, params.region || this.context.region);
+    }
+    fraudPaymentRegistrationPost(params) {
+        const headers = this.context.genHeaders(params.payload);
+        return this.client.fraudPaymentRegistrationPost(headers.contentType, headers.clientRequestId, headers.apiKey, headers.timestamp, params.payload, headers.messageSignature, params.region || this.context.region);
+    }
 }
 exports.FraudDetectApi = Wrapper;

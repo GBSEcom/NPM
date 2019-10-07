@@ -21,7 +21,6 @@ export {
   BasicResponse,
   Billing,
   BillingAddress,
-  BillingAddressPhone,
   CarRental,
   CarRentalExtraCharges,
   Card,
@@ -34,16 +33,15 @@ export {
   ChinaDomesticPaymentMethod,
   ChinaPnRSaleTransaction,
   ClientLocale,
+  ClientRegistration,
   Contact,
   CreatePaymentToken,
   CurrencyConversion,
   Customer,
   CustomerAddress,
-  CustomerAddressPhone,
   DCCExchangeRateRequest,
   Dcc,
   Device,
-  DeviceNetworks,
   Disbursement,
   DisbursementTransactionType,
   Document,
@@ -55,25 +53,35 @@ export {
   EncryptedGooglePay,
   EncryptedGooglePayData,
   EncryptedGooglePayWalletPaymentMethod,
+  EncryptedSamsungPay,
+  EncryptedSamsungPayWalletPaymentMethod,
   ErrorDetails,
+  ErrorMessage,
   ErrorResponse,
   ExchangeRateRequest,
   ExchangeRateResponse,
   Expiration,
+  FraudAddress,
   FraudOrder,
   FraudOrderItems,
-  FraudOrderShipToAddress,
+  FraudRegistration,
+  FraudRegistrationCard,
+  FraudRegistrationDevice,
+  FraudRegistrationDeviceItems,
+  FraudRegistrationError,
+  FraudRegistrationResponse,
+  FraudScore,
   Frequency,
   FundingTransactionType,
   IndustrySpecificExtensions,
   InstallmentOptions,
+  Items,
+  Location,
   Lodging,
   LodgingExtraCharges,
   Loyalty,
   Merchant,
-  MerchantLocation,
-  MerchantLocationMerchantAddress,
-  ModelError,
+  Method,
   Order,
   OrderErrorResponse,
   OrderResponse,
@@ -89,12 +97,18 @@ export {
   PaymentCardPaymentTokenizationRequest,
   PaymentCardPreAuthTransaction,
   PaymentCardSaleTransaction,
+  PaymentDevice,
+  PaymentDeviceCreditTransaction,
+  PaymentDeviceDisbursementTransaction,
+  PaymentDevicePaymentMethod,
+  PaymentDevicePreAuthTransaction,
+  PaymentDeviceSaleTransaction,
   PaymentFacilitator,
-  PaymentIssuerResponse,
   PaymentMethod,
   PaymentMethodDetails,
   PaymentMethodPaymentSchedulesRequest,
   PaymentMethodType,
+  PaymentRegistration,
   //PaymentPayMethod,
   PaymentSchedulesErrorResponse,
   PaymentSchedulesRequest,
@@ -108,13 +122,14 @@ export {
   PaymentTokenizationErrorResponse,
   PaymentTokenizationRequest,
   PaymentTokenizationResponse,
+  PaymentUrlDetail,
+  PaymentUrlDetailResponse,
   PaymentUrlErrorResponse,
   PaymentUrlRequest,
   PaymentUrlResponse,
-  PaymentVerification3ds,
-  PaymentVerificationAvs,
-  PaymentVerificationCvv,
+  PaymentUrlStatus,
   PaypalCreditTransaction,
+  Phone,
   PostAuthTransaction,
   PrimaryTransaction,
   ProcessorData,
@@ -122,12 +137,12 @@ export {
   PurchaseCardsLevel2,
   PurchaseCardsLevel3,
   PurchaseCardsLevel3LineItems,
+  ReceiverInfo,
   RecurringPaymentDetails,
   RecurringPaymentDetailsResponse,
   ReferencedOrderPaymentSchedulesRequest,
   ReferencedOrderPaymentTokenizationRequest,
-  RequestArgs,
-  RequiredError,
+  RegistrationMethod,
   ResponseAmountComponents,
   ResponseType,
   ReturnTransaction,
@@ -147,12 +162,12 @@ export {
   SepaPaymentMethod,
   SepaSaleTransaction,
   Shipping,
+  ShipToAddress,
   SoftDescriptor,
   SplitShipment,
   StoredCredential,
   SubMerchantData,
   SubMerchantSplit,
-  Transaction,
   TransactionErrorResponse,
   TransactionOrigin,
   TransactionResponse,
@@ -160,6 +175,9 @@ export {
   UnionPayAuthenticationRequest,
   UnionPayAuthenticationVerificationRequest,
   UsePaymentToken,
+  Verification3ds,
+  VerificationAvs,
+  VerificationCvv,
   VoidTransaction,
   WalletPaymentMethod,
   WalletPreAuthTransaction,
@@ -194,6 +212,30 @@ export type ApiField<T, P = any> =
   T extends "tokenId" ? {
     // Identifies a payment token
     tokenId: string;
+  } :
+  T extends "paymentUrlId" ? {
+    //Identifies Payment URL
+    paymentUrlId: string;
+  } :
+  T extends "transactionTime" ? {
+    //Identifies the time of the transaction
+    transactionTime: string;
+  } :
+  T extends "fromDate" ? {
+    //Identifies the start date of the URL
+    fromDate: string;
+  } :
+  T extends "toDate" ? {
+    //Identifies the end date of the URL
+    toDate: string;
+  } :
+  T extends "merchantTransactionId" ? {
+    //Identifies the merchantTransactionId of the URL
+    merchantTransactionId: string;
+  } :
+  T extends "status" ? {
+    //Identifies the status of the URL
+    status: string;
   } :
   T extends "payload" ? {
     payload: P;
