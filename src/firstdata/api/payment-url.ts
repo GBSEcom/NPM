@@ -100,7 +100,7 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
         params.orderId,
         params.merchantTransactionId,
         params.status,
-      );
+       );
     }
 }
 

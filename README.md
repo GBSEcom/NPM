@@ -1,10 +1,10 @@
 # FirstApiSDK
 
 FirstApiSdk - Typescript client for FirstApiSDK
-Payment Gateway API for payment processing. Version 6.7
+Payment Gateway API for payment processing. Version 6.9
 
-- API version: 6.8
-- Package version: 1.4.0
+- API version: 6.9
+- Package version: 1.5.0
 
 ## Installation
 
