@@ -1,9 +1,9 @@
 # FirstApiSDK
 
 FirstApiSdk - Typescript client for FirstApiSDK
-Payment Gateway API for payment processing. Version 6.9
+Payment Gateway API for payment processing. Version 1.5.0
 
-- API version: 6.9
+- API version: 1.5.0
 - Package version: 1.5.0
 
 ## Installation
@@ -109,6 +109,8 @@ Interface | Method | HTTP request | Description
 *ICardVerificationApi* | **verifyCard** | **POST** /v2/card-verification | Verify a payment card.
 *ICurrencyConversionApi* | **getExchangeRate** | **POST** /v2/exchange-rates | Generate dynamic currency conversion transactions
 *IFraudDetectApi* | **scoreOnly** | **POST** /v2/fraud/score-only | Score a transaction for fraud.
+*IFraudDetectApi* | **clientRegistration** | **POST** /v2/fraud/client-registration | Client Registration for fraud detect.
+*IFraudDetectApi* | **paymentRegistration** | **POST** /v2/fraud/payment-registration | Payment Registration for fraud detect.
 *IOrderApi* | **orderInquiry** | **GET** /v2/orders/{order-id} | Retrieve the state of an order
 *IOrderApi* | **secondaryTransaction** | **POST** /v2/orders/{order-id} | Perform a return or postAuth on an already existing order.
 *IPaymentApi* | **finalizeSecureTransaction** | **PATCH** /v2/payments/{transaction-id} | Update a 3DSecure or UnionPay payment and continue processing.
@@ -122,6 +124,8 @@ Interface | Method | HTTP request | Description
 *IPaymentTokenApi* | **createPaymentToken** | **POST** /v2/payment-tokens | Create a payment token from a payment card.
 *IPaymentTokenApi* | **deletePaymentToken** | **DELETE** /v2/payment-tokens/{token-id} | Delete a payment token.
 *IPaymentUrlApi* | **createPaymentUrl** | **POST** /v2/payment-url | Create a payment URL.
+*IPaymentUrlApi* | **deletePaymentUrl** | **DELETE** /v2/payment-url | Delete a payment URL.
+*IPaymentUrlApi* | **paymentUrlDetail** | **GET** /v2/payment-url | Retrive the state of a payment URL.
 
 
 ## Code Overview
@@ -227,8 +231,20 @@ type ScoreOnlyParams = {
   payload: ScoreOnlyRequest;
 };
 
+type ClientRegistrationParams = {
+  region?: string;
+  payload: ClientRegistration;
+};
+
+type PaymentRegistrationParams = {
+  region?: string;
+  payload: PaymentRegistration;
+};
+
 interface IFraudDetectApi {
   scoreOnly(params: ScoreOnlyParams): AxiosPromise<ScoreOnlyResponse>;
+  fraudClientRegistrationPost(params: ClientRegistrationParams): AxiosPromise<FraudRegistrationResponse>;
+  fraudPaymentRegistrationPost(params: PaymentRegistrationParams): AxiosPromise<FraudRegistrationResponse>;
 }
 ```
 
@@ -310,8 +326,29 @@ type CreatePaymentUrlParams = {
   payload: PaymentUrlRequest;
 };
 
+type DeletePaymentUrlParams = {
+  region?: string;
+  storeId?: string;
+  transactionId?: string;
+  orderId?: string;
+  paymentUrlId?: string;
+  transactionTime?; string;
+};
+
+type PaymentUrlDetailParams = {
+  region?: string;
+  storeId?: string;
+  fromDate: string;
+  toDate: string;
+  orderId?: string;
+  merchantTransactionId?: string;
+  status?: string;
+};
+
 interface IPaymentUrlApi {
   createPaymentUrl(params: CreatePaymentUrlParams): AxiosPromise<PaymentUrlResponse>;
+  deletePaymentUrl(params: DeletePaymentUrlParams): AxiosPromise<PaymentUrlResponse>;
+  paymentUrlDetail(params: PaymentUrlDetailParams): AxiosPromise<PaymentUrlDetailResponse>;
 }
 ```
 
