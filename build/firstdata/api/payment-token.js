@@ -14,5 +14,9 @@ class Wrapper extends base_1.BaseApi {
         const headers = this.context.genHeaders();
         return this.client.deletePaymentToken(headers.contentType, headers.clientRequestId, headers.apiKey, headers.timestamp, params.tokenId, (params.authorization != null) ? undefined : headers.messageSignature, params.authorization, params.region || this.context.region, params.storeId || this.context.storeId);
     }
+    getPaymentTokenDetails(params) {
+        const headers = this.context.genHeaders();
+        return this.client.getPaymentTokenDetails(headers.contentType, headers.clientRequestId, headers.apiKey, headers.timestamp, params.tokenId, (params.authorization != null) ? undefined : headers.messageSignature, params.authorization, params.region || this.context.region, params.storeId || this.context.storeId);
+    }
 }
 exports.PaymentTokenApi = Wrapper;

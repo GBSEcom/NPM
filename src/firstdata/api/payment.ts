@@ -4,7 +4,7 @@ import {PaymentApi as Generated, PaymentApiInterface as IGenerated} from "../../
 import {IContext} from "../context";
 import {
   ApiField,
-  AuthenticationVerificationRequest,
+  AuthenticationUpdateRequest,
   PrimaryTransaction,
   SecondaryTransaction,
   TransactionResponse,
@@ -27,7 +27,7 @@ type PrimaryTransactionParams =
 type FinalizeTransactionParams =
   ApiField<"region"> &
   ApiField<"transactionId"> &
-  ApiField<"payload", AuthenticationVerificationRequest>;
+  ApiField<"payload", AuthenticationUpdateRequest>;
 
 interface IWrapper {
     /**

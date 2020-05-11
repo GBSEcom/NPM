@@ -6,6 +6,7 @@ import { ApiField, PaymentTokenizationRequest, PaymentTokenizationResponse } fro
 declare type PaymentTokenParams = ApiField<"region"> & ApiField<"authorization">;
 declare type CreatePaymentTokenParams = PaymentTokenParams & ApiField<"payload", PaymentTokenizationRequest>;
 declare type DeletePaymentTokenParams = PaymentTokenParams & ApiField<"tokenId"> & ApiField<"storeId">;
+declare type GetPaymentTokenDetailsParams = PaymentTokenParams & ApiField<"tokenId"> & ApiField<"storeId">;
 interface IWrapper {
     /**
      * Use this to create a payment token from a payment card.
@@ -21,13 +22,22 @@ interface IWrapper {
      * @throws {RequiredError}
      */
     deletePaymentToken(params: DeletePaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
+    /**
+    * Use this to delete a payment token.
+    * @summary Delete a payment token.
+    * @param {DeletePaymentTokenParams} params
+    * @throws {RequiredError}
+    */
+    getPaymentTokenDetails(params: GetPaymentTokenDetailsParams): AxiosPromise<PaymentTokenizationResponse>;
 }
 declare class Wrapper extends BaseApi<IGenerated> implements IWrapper {
     constructor(context: IContext);
     createPaymentToken(params: CreatePaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
     deletePaymentToken(params: DeletePaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
+    getPaymentTokenDetails(params: DeletePaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
 }
 export { IWrapper as IPaymentTokenApi };
 export { Wrapper as PaymentTokenApi };
 export { CreatePaymentTokenParams };
 export { DeletePaymentTokenParams };
+export { GetPaymentTokenDetailsParams };

@@ -3,6 +3,12 @@ import {AuthenticationApi as Generated, AuthenticationApiInterface as IGenerated
 import {IContext} from "../context";
 import {AccessTokenResponse} from "../models";
 import {BaseApi} from "./base";
+import {
+ApiField,
+AccessTokenRequest} from "../models";
+
+type AccessTokenParams = 
+	ApiField<"payload",AccessTokenRequest>;
 
 interface IWrapper {
     /**
@@ -10,19 +16,20 @@ interface IWrapper {
      * @summary Generate an access token for user authentication.
      * @throws {RequiredError}
      */
-    getAccessToken(): AxiosPromise<AccessTokenResponse>;
+    getAccessToken(params:AccessTokenParams): AxiosPromise<AccessTokenResponse>;
 }
 
 class Wrapper extends BaseApi<IGenerated> implements IWrapper {
   public constructor(context: IContext) { super(context, Generated); }
 
-  public getAccessToken(): AxiosPromise<AccessTokenResponse> {
-    const headers = this.context.genHeaders();
+  public getAccessToken(params:AccessTokenParams): AxiosPromise<AccessTokenResponse> {
+    const headers = this.context.genHeaders(params.payload);
     return this.client.authenticationAccessTokensPost(
       headers.contentType,
       headers.clientRequestId,
       headers.apiKey,
       headers.timestamp,
+      params.payload,
       headers.messageSignature,
     );
   }
@@ -31,4 +38,5 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
 // EXPORTS
 export {IWrapper as IAuthenticationApi};
 export {Wrapper as AuthenticationApi};
+export {AccessTokenParams};
 

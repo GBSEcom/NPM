@@ -2,11 +2,11 @@ import { AxiosPromise } from "axios";
 import { BaseApi } from "./base";
 import { PaymentApiInterface as IGenerated } from "../../openapi/api";
 import { IContext } from "../context";
-import { ApiField, AuthenticationVerificationRequest, PrimaryTransaction, SecondaryTransaction, TransactionResponse } from "../models";
+import { ApiField, AuthenticationUpdateRequest, PrimaryTransaction, SecondaryTransaction, TransactionResponse } from "../models";
 declare type PaymentParams = ApiField<"region"> & ApiField<"transactionId"> & ApiField<"storeId">;
 declare type SecondaryTxPaymentParams = PaymentParams & ApiField<"payload", SecondaryTransaction>;
 declare type PrimaryTransactionParams = ApiField<"region"> & ApiField<"payload", PrimaryTransaction>;
-declare type FinalizeTransactionParams = ApiField<"region"> & ApiField<"transactionId"> & ApiField<"payload", AuthenticationVerificationRequest>;
+declare type FinalizeTransactionParams = ApiField<"region"> & ApiField<"transactionId"> & ApiField<"payload", AuthenticationUpdateRequest>;
 interface IWrapper {
     /**
      * Use this to handle a 3DSecure redirect response or UnionPay authentication, updating the transaction and continuing processing.

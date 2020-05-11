@@ -17,10 +17,10 @@ type DeletePaymentUrlParams =
   ApiField<"transactionTime">;
 
 type PaymentUrlDetailParams = 
-  ApiField<"fromDate"> &
-  ApiField<"toDate"> &
   ApiField<"region"> &
   ApiField<"storeId"> &
+  ApiField<"fromDate"> &
+  ApiField<"toDate"> &
   ApiField<"orderId"> &
   ApiField<"merchantTransactionId"> &
   ApiField<"status">;
@@ -81,26 +81,26 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
       params.transactionId,
       params.orderId,
       params.paymentUrlId,
-      params.transactionTime,
+      params.transactionTime
     );
   }
 
     public paymentUrlDetail(params: PaymentUrlDetailParams): AxiosPromise<PaymentUrlDetailResponse> {
       const headers = this.context.genHeaders();
       return this.client.paymentUrlDetail(
-        headers.contentType,
-        headers.clientRequestId,
-        headers.apiKey,
-        headers.timestamp,
-        params.fromDate,
-        params.toDate,
-        headers.messageSignature,
-        params.region || this.context.region,
-        params.storeId || this.context.storeId,
-        params.orderId,
-        params.merchantTransactionId,
-        params.status,
-       );
+      headers.contentType, 
+      headers.clientRequestId, 
+      headers.apiKey, 
+      headers.timestamp, 
+      params.fromDate, 
+      params.toDate, 
+      headers.messageSignature, 
+      params.region || this.context.region, 
+      params.storeId || this.context.storeId,
+      params.orderId, 
+      params.merchantTransactionId, 
+      params.status
+      );
     }
 }
 

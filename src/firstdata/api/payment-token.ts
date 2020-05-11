@@ -17,6 +17,11 @@ type DeletePaymentTokenParams =
   ApiField<"tokenId"> &
   ApiField<"storeId">;
 
+type GetPaymentTokenDetailsParams =
+  PaymentTokenParams &
+  ApiField<"tokenId"> &
+  ApiField<"storeId">;
+
 interface IWrapper {
     /**
      * Use this to create a payment token from a payment card.
@@ -33,6 +38,14 @@ interface IWrapper {
      * @throws {RequiredError}
      */
     deletePaymentToken(params: DeletePaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
+
+     /**
+     * Use this to delete a payment token.
+     * @summary Delete a payment token.
+     * @param {DeletePaymentTokenParams} params
+     * @throws {RequiredError}
+     */
+    getPaymentTokenDetails(params: GetPaymentTokenDetailsParams): AxiosPromise<PaymentTokenizationResponse>;
 }
 
 class Wrapper extends BaseApi<IGenerated> implements IWrapper {
@@ -68,6 +81,22 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
       params.storeId || this.context.storeId,
     );
   }
+
+  public getPaymentTokenDetails(params: DeletePaymentTokenParams): AxiosPromise<PaymentTokenizationResponse> {
+    const headers = this.context.genHeaders();
+    return this.client.getPaymentTokenDetails(
+      headers.contentType,
+      headers.clientRequestId,
+      headers.apiKey,
+      headers.timestamp,
+      params.tokenId,
+      (params.authorization != null) ? undefined : headers.messageSignature,
+      params.authorization,
+      params.region || this.context.region,
+      params.storeId || this.context.storeId,
+    );
+  }
+
 }
 
 // EXPORTS
@@ -75,4 +104,5 @@ export {IWrapper as IPaymentTokenApi};
 export {Wrapper as PaymentTokenApi};
 export {CreatePaymentTokenParams};
 export {DeletePaymentTokenParams};
+export {GetPaymentTokenDetailsParams};
 

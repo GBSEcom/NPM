@@ -5,7 +5,7 @@ import { IContext } from "../context";
 import { ApiField, PaymentUrlRequest, PaymentUrlResponse, PaymentUrlDetailResponse } from "../models";
 declare type CreatePaymentUrlParams = ApiField<"region"> & ApiField<"payload", PaymentUrlRequest>;
 declare type DeletePaymentUrlParams = ApiField<"region"> & ApiField<"storeId"> & ApiField<"transactionId"> & ApiField<"orderId"> & ApiField<"paymentUrlId"> & ApiField<"transactionTime">;
-declare type PaymentUrlDetailParams = ApiField<"fromDate"> & ApiField<"toDate"> & ApiField<"region"> & ApiField<"storeId"> & ApiField<"orderId"> & ApiField<"merchantTransactionId"> & ApiField<"status">;
+declare type PaymentUrlDetailParams = ApiField<"region"> & ApiField<"storeId"> & ApiField<"fromDate"> & ApiField<"toDate"> & ApiField<"orderId"> & ApiField<"merchantTransactionId"> & ApiField<"status">;
 interface IWrapper {
     /**
      * Use this to generate an embedding payment link.

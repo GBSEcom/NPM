@@ -10,11 +10,37 @@ class Wrapper extends base_1.BaseApi {
     }
     deletePaymentUrl(params) {
         const headers = this.context.genHeaders();
-        return this.client.deletePaymentUrl(headers.contentType, headers.clientRequestId, headers.apiKey, headers.timestamp, headers.messageSignature, params.region || this.context.region, params.storeId || this.context.storeId, params.transactionId, params.orderId, params.paymentUrlId, params.transactionTime);
+        return this.client.deletePaymentUrl(
+            headers.contentType, 
+            headers.clientRequestId, 
+            headers.apiKey, 
+            headers.timestamp, 
+            headers.messageSignature, 
+            params.region || this.context.region, 
+            params.storeId || this.context.storeId,
+            params.transactionId, 
+            params.orderId, 
+            params.paymentUrlId, 
+            params.transactionTime 
+        );
     }
     paymentUrlDetail(params) {
         const headers = this.context.genHeaders();
-        return this.client.paymentUrlDetail(headers.contentType, headers.clientRequestId, headers.apiKey, headers.timestamp, params.fromDate, params.toDate, headers.messageSignature, params.region || this.context.region, params.storeId || this.context.storeId, params.orderId, params.merchantTransactionId, params.status);
+        console.log(params);
+        return this.client.paymentUrlDetail(
+            headers.contentType, 
+            headers.clientRequestId, 
+            headers.apiKey, 
+            headers.timestamp, 
+            params.fromDate, 
+            params.toDate, 
+            headers.messageSignature, 
+            params.region || this.context.region, 
+            params.storeId || this.context.storeId,
+            params.orderId, 
+            params.merchantTransactionId, 
+            params.status
+        );
     }
 }
 exports.PaymentUrlApi = Wrapper;
