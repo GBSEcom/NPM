@@ -2,8 +2,8 @@ import {IContext} from "./context";
 
 import {
   AuthenticationApi, IAuthenticationApi,
-  CardInfoLookupApi, ICardInfoLookupApi,
-  CardVerificationApi, ICardVerificationApi,
+  InformationLookupApi, IInformationLookupApi,
+  VerificationApi, IVerificationApi,
   CurrencyConversionApi, ICurrencyConversionApi,
   FraudDetectApi, IFraudDetectApi,
   OrderApi, IOrderApi,
@@ -15,8 +15,8 @@ import {
 
 interface IClientFactory {
   authenticationApi(): IAuthenticationApi;
-  cardInfoLookupApi(): ICardInfoLookupApi;
-  cardVerificationApi(): ICardVerificationApi;
+  informationLookupApi(): IInformationLookupApi;
+  verificationApi(): IVerificationApi;
   currencyConversionApi(): ICurrencyConversionApi;
   fraudDetectApi(): IFraudDetectApi;
   orderApi(): IOrderApi;
@@ -33,12 +33,12 @@ class ClientFactory implements IClientFactory {
     return new AuthenticationApi(this.context);
   }
 
-  public cardInfoLookupApi(): ICardInfoLookupApi {
-    return new CardInfoLookupApi(this.context);
+  public informationLookupApi(): IInformationLookupApi {
+    return new InformationLookupApi(this.context);
   }
 
-  public cardVerificationApi(): ICardVerificationApi {
-    return new CardVerificationApi(this.context);
+  public verificationApi(): IVerificationApi {
+    return new VerificationApi(this.context);
   }
 
   public currencyConversionApi(): ICurrencyConversionApi {

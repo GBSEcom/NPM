@@ -1,12 +1,17 @@
 import {AxiosPromise} from "axios";
 import {BaseApi} from "./base";
-import {CardInfoLookupApi as Generated, CardInfoLookupApiInterface as IGenerated} from "../../openapi/api";
+import {InformationLookupApi as Generated, InformationLookupApiInterface as IGenerated} from "../../openapi/api";
 import {IContext} from "../context";
-import {ApiField, CardInfoLookupRequest, CardInfoLookupResponse} from "../models";
+import {ApiField, CardInfoLookupRequest, AccountInfoLookupRequest, CardInfoLookupResponse} from "../models";
 
 type CardInfoLookupParams =
   ApiField<"region"> &
   ApiField<"payload", CardInfoLookupRequest>;
+
+type AcctInfoLookupParams =
+  ApiField<"region"> &
+  ApiField<"payload", AccountInfoLookupRequest>;
+
 
 interface IWrapper {
     /**
@@ -33,10 +38,24 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
       params.region || this.context.region,
     );
   }
+
+  public acctInfoLookup(params: AcctInfoLookupParams): AxiosPromise<CardInfoLookupResponse> {
+    const headers = this.context.genHeaders(params.payload);
+    return this.client.lookupAccount(
+      headers.contentType,
+      headers.clientRequestId,
+      headers.apiKey,
+      headers.timestamp,
+      params.payload,
+      headers.messageSignature,
+      params.region || this.context.region,
+    );
+  }
 }
 
 // EXPORTS
-export {IWrapper as ICardInfoLookupApi};
-export {Wrapper as CardInfoLookupApi};
+export {IWrapper as IInformationLookupApi};
+export {Wrapper as InformationLookupApi};
 export {CardInfoLookupParams};
+export {AcctInfoLookupParams};
 

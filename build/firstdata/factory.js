@@ -1,39 +1,40 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const api_1 = require("./api");
-class ClientFactory {
-    constructor(context) {
+var api_1 = require("./api");
+var ClientFactory = /** @class */ (function () {
+    function ClientFactory(context) {
         this.context = context;
     }
-    authenticationApi() {
+    ClientFactory.prototype.authenticationApi = function () {
         return new api_1.AuthenticationApi(this.context);
-    }
-    cardInfoLookupApi() {
-        return new api_1.CardInfoLookupApi(this.context);
-    }
-    cardVerificationApi() {
-        return new api_1.CardVerificationApi(this.context);
-    }
-    currencyConversionApi() {
+    };
+    ClientFactory.prototype.informationLookupApi = function () {
+        return new api_1.InformationLookupApi(this.context);
+    };
+    ClientFactory.prototype.verificationApi = function () {
+        return new api_1.VerificationApi(this.context);
+    };
+    ClientFactory.prototype.currencyConversionApi = function () {
         return new api_1.CurrencyConversionApi(this.context);
-    }
-    fraudDetectApi() {
+    };
+    ClientFactory.prototype.fraudDetectApi = function () {
         return new api_1.FraudDetectApi(this.context);
-    }
-    orderApi() {
+    };
+    ClientFactory.prototype.orderApi = function () {
         return new api_1.OrderApi(this.context);
-    }
-    paymentSchedulesApi() {
+    };
+    ClientFactory.prototype.paymentSchedulesApi = function () {
         return new api_1.PaymentSchedulesApi(this.context);
-    }
-    paymentTokenApi() {
+    };
+    ClientFactory.prototype.paymentTokenApi = function () {
         return new api_1.PaymentTokenApi(this.context);
-    }
-    paymentUrlApi() {
+    };
+    ClientFactory.prototype.paymentUrlApi = function () {
         return new api_1.PaymentUrlApi(this.context);
-    }
-    paymentApi() {
+    };
+    ClientFactory.prototype.paymentApi = function () {
         return new api_1.PaymentApi(this.context);
-    }
-}
+    };
+    return ClientFactory;
+}());
 exports.ClientFactory = ClientFactory;

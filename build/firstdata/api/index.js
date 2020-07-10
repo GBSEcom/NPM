@@ -4,8 +4,8 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./authentication"));
-__export(require("./card-info-lookup"));
-__export(require("./card-verification"));
+__export(require("./information-lookup"));
+__export(require("./verification"));
 __export(require("./currency-conversion"));
 __export(require("./fraud-detect"));
 __export(require("./order"));

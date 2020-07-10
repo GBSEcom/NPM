@@ -1,12 +1,16 @@
 import {AxiosPromise} from "axios";
 import {BaseApi} from "./base";
-import {CardVerificationApi as Generated, CardVerificationApiInterface as IGenerated} from "../../openapi/api";
+import {VerificationApi as Generated, VerificationApiInterface as IGenerated} from "../../openapi/api";
 import {IContext} from "../context";
-import {ApiField, CardVerificationRequest, TransactionResponse} from "../models";
+import {ApiField, CardVerificationRequest, AccountVerificationRequest, TransactionResponse} from "../models";
 
 type VerifyCardParams =
   ApiField<"region"> &
   ApiField<"payload", CardVerificationRequest>;
+
+type VerifyAcctParams =
+  ApiField<"region"> &
+  ApiField<"payload", AccountVerificationRequest>;
 
 interface IWrapper {
     /**
@@ -33,10 +37,25 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
       params.region || this.context.region,
     );
   }
+
+  public verifyAccount(params: VerifyAcctParams): AxiosPromise<TransactionResponse> {
+    const headers = this.context.genHeaders(params.payload);
+    return this.client.verifyAccount(
+      headers.contentType,
+      headers.clientRequestId,
+      headers.apiKey,
+      headers.timestamp,
+      params.payload,
+      headers.messageSignature,
+      params.region || this.context.region,
+    );
+  }
+
 }
 
 // EXPORTS
-export {IWrapper as ICardVerificationApi};
-export {Wrapper as CardVerificationApi};
+export {IWrapper as IVerificationApi};
+export {Wrapper as VerificationApi};
 export {VerifyCardParams};
+export {VerifyAcctParams};
 

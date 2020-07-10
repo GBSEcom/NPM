@@ -1,9 +1,9 @@
 import { IContext } from "./context";
-import { IAuthenticationApi, ICardInfoLookupApi, ICardVerificationApi, ICurrencyConversionApi, IFraudDetectApi, IOrderApi, IPaymentSchedulesApi, IPaymentTokenApi, IPaymentUrlApi, IPaymentApi } from "./api";
+import { IAuthenticationApi, IInformationLookupApi, IVerificationApi, ICurrencyConversionApi, IFraudDetectApi, IOrderApi, IPaymentSchedulesApi, IPaymentTokenApi, IPaymentUrlApi, IPaymentApi } from "./api";
 interface IClientFactory {
     authenticationApi(): IAuthenticationApi;
-    cardInfoLookupApi(): ICardInfoLookupApi;
-    cardVerificationApi(): ICardVerificationApi;
+    informationLookupApi(): IInformationLookupApi;
+    verificationApi(): IVerificationApi;
     currencyConversionApi(): ICurrencyConversionApi;
     fraudDetectApi(): IFraudDetectApi;
     orderApi(): IOrderApi;
@@ -16,8 +16,8 @@ declare class ClientFactory implements IClientFactory {
     private readonly context;
     constructor(context: IContext);
     authenticationApi(): IAuthenticationApi;
-    cardInfoLookupApi(): ICardInfoLookupApi;
-    cardVerificationApi(): ICardVerificationApi;
+    informationLookupApi(): IInformationLookupApi;
+    verificationApi(): IVerificationApi;
     currencyConversionApi(): ICurrencyConversionApi;
     fraudDetectApi(): IFraudDetectApi;
     orderApi(): IOrderApi;

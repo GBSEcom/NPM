@@ -2,7 +2,7 @@ import {AxiosPromise} from "axios";
 import {BaseApi} from "./base";
 import {PaymentTokenApi as Generated, PaymentTokenApiInterface as IGenerated} from "../../openapi/api";
 import {IContext} from "../context";
-import {ApiField, PaymentTokenizationRequest, PaymentTokenizationResponse} from "../models";
+import {ApiField, PaymentTokenizationRequest, PaymentTokenizationResponse, PaymentCardPaymentTokenUpdateRequest, PaymentTokenUpdateResponse} from "../models";
 
 type PaymentTokenParams =
   ApiField<"region"> &
@@ -12,12 +12,16 @@ type CreatePaymentTokenParams =
   PaymentTokenParams &
   ApiField<"payload", PaymentTokenizationRequest>;
 
+type UpdatePaymentTokenParams =
+  PaymentTokenParams &
+  ApiField<"payload", PaymentCardPaymentTokenUpdateRequest>;
+
 type DeletePaymentTokenParams =
   PaymentTokenParams &
   ApiField<"tokenId"> &
   ApiField<"storeId">;
 
-type GetPaymentTokenDetailsParams =
+type GetPaymentTokenParams =
   PaymentTokenParams &
   ApiField<"tokenId"> &
   ApiField<"storeId">;
@@ -32,6 +36,15 @@ interface IWrapper {
     createPaymentToken(params: CreatePaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
 
     /**
+     * Use this to update a payment token from a payment card.
+     * @summary Update a payment token from a payment card.
+     * @param {UpdatePaymentTokenParams} params
+     * @throws {RequiredError}
+     */
+    updatePaymentToken(params: UpdatePaymentTokenParams): AxiosPromise<PaymentTokenUpdateResponse>;
+
+
+    /**
      * Use this to delete a payment token.
      * @summary Delete a payment token.
      * @param {DeletePaymentTokenParams} params
@@ -39,13 +52,14 @@ interface IWrapper {
      */
     deletePaymentToken(params: DeletePaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
 
-     /**
-     * Use this to delete a payment token.
-     * @summary Delete a payment token.
-     * @param {DeletePaymentTokenParams} params
+    /**
+     * Use this to get details of a payment token.
+     * @summary Get details of a payment token.
+     * @param {GetPaymentTokenParams} params
      * @throws {RequiredError}
      */
-    getPaymentTokenDetails(params: GetPaymentTokenDetailsParams): AxiosPromise<PaymentTokenizationResponse>;
+    getPaymentTokenDetails(params: GetPaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
+
 }
 
 class Wrapper extends BaseApi<IGenerated> implements IWrapper {
@@ -56,6 +70,22 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
       ? this.context.genHeaders()
       : this.context.genHeaders(params.payload);
     return this.client.createPaymentToken(
+      headers.contentType,
+      headers.clientRequestId,
+      headers.apiKey,
+      headers.timestamp,
+      params.payload,
+      (params.authorization != null) ? undefined : headers.messageSignature,
+      params.authorization,
+      params.region || this.context.region,
+    );
+  }
+
+  public updatePaymentToken(params: UpdatePaymentTokenParams): AxiosPromise<PaymentTokenUpdateResponse> {
+    const headers = (params.authorization != null)
+      ? this.context.genHeaders()
+      : this.context.genHeaders(params.payload);
+    return this.client.updatePaymentToken(
       headers.contentType,
       headers.clientRequestId,
       headers.apiKey,
@@ -82,7 +112,7 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
     );
   }
 
-  public getPaymentTokenDetails(params: DeletePaymentTokenParams): AxiosPromise<PaymentTokenizationResponse> {
+  public getPaymentTokenDetails(params: GetPaymentTokenParams): AxiosPromise<PaymentTokenizationResponse> {
     const headers = this.context.genHeaders();
     return this.client.getPaymentTokenDetails(
       headers.contentType,
@@ -103,6 +133,7 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
 export {IWrapper as IPaymentTokenApi};
 export {Wrapper as PaymentTokenApi};
 export {CreatePaymentTokenParams};
+export {UpdatePaymentTokenParams};
 export {DeletePaymentTokenParams};
-export {GetPaymentTokenDetailsParams};
+export {GetPaymentTokenParams};
 

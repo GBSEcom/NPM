@@ -71,23 +71,23 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
   public deletePaymentUrl(params: DeletePaymentUrlParams): AxiosPromise<PaymentUrlResponse> {
     const headers = this.context.genHeaders();
     return this.client.deletePaymentUrl(
-      headers.contentType,
-      headers.clientRequestId,
-      headers.apiKey,
-      headers.timestamp,
-      headers.messageSignature,
-      params.region || this.context.region,
+      headers.contentType, 
+      headers.clientRequestId, 
+      headers.apiKey, 
+      headers.timestamp, 
+      headers.messageSignature, 
+      params.region || this.context.region, 
       params.storeId || this.context.storeId,
-      params.transactionId,
-      params.orderId,
-      params.paymentUrlId,
-      params.transactionTime
+      params.transactionId, 
+      params.orderId, 
+      params.paymentUrlId, 
+      params.transactionTime 
     );
   }
 
-    public paymentUrlDetail(params: PaymentUrlDetailParams): AxiosPromise<PaymentUrlDetailResponse> {
-      const headers = this.context.genHeaders();
-      return this.client.paymentUrlDetail(
+  public paymentUrlDetail(params: PaymentUrlDetailParams): AxiosPromise<PaymentUrlDetailResponse> {
+    const headers = this.context.genHeaders();
+    return this.client.paymentUrlDetail(
       headers.contentType, 
       headers.clientRequestId, 
       headers.apiKey, 
@@ -100,8 +100,8 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
       params.orderId, 
       params.merchantTransactionId, 
       params.status
-      );
-    }
+    );
+  }
 }
 
 // EXPORTS

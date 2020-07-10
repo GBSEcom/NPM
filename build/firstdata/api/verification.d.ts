@@ -1,9 +1,10 @@
 import { AxiosPromise } from "axios";
 import { BaseApi } from "./base";
-import { CardVerificationApiInterface as IGenerated } from "../../openapi/api";
+import { VerificationApiInterface as IGenerated } from "../../openapi/api";
 import { IContext } from "../context";
-import { ApiField, CardVerificationRequest, TransactionResponse } from "../models";
+import { ApiField, CardVerificationRequest, AccountVerificationRequest, TransactionResponse } from "../models";
 declare type VerifyCardParams = ApiField<"region"> & ApiField<"payload", CardVerificationRequest>;
+declare type VerifyAcctParams = ApiField<"region"> & ApiField<"payload", AccountVerificationRequest>;
 interface IWrapper {
     /**
      * Use this to perform card verification for a payment card.
@@ -16,7 +17,9 @@ interface IWrapper {
 declare class Wrapper extends BaseApi<IGenerated> implements IWrapper {
     constructor(context: IContext);
     verifyCard(params: VerifyCardParams): AxiosPromise<TransactionResponse>;
+    verifyAccount(params: VerifyAcctParams): AxiosPromise<TransactionResponse>;
 }
-export { IWrapper as ICardVerificationApi };
-export { Wrapper as CardVerificationApi };
+export { IWrapper as IVerificationApi };
+export { Wrapper as VerificationApi };
 export { VerifyCardParams };
+export { VerifyAcctParams };
