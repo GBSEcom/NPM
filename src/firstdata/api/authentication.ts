@@ -20,7 +20,7 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
   public constructor(context: IContext) { super(context, Generated); }
 
   public getAccessToken(params: GetAccessTokenParams): AxiosPromise<AccessTokenResponse> {
-    const headers = this.context.genHeaders();
+    const headers = this.context.genHeaders(params.payload);
     return this.client.authenticationAccessTokensPost(
       headers.contentType,
       headers.clientRequestId,

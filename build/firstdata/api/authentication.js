@@ -21,7 +21,7 @@ var Wrapper = /** @class */ (function (_super) {
         return _super.call(this, context, api_1.AuthenticationApi) || this;
     }
     Wrapper.prototype.getAccessToken = function (params) {
-        var headers = this.context.genHeaders();
+        var headers = this.context.genHeaders(params.payload);
         return this.client.authenticationAccessTokensPost(headers.contentType, headers.clientRequestId, headers.apiKey, headers.timestamp, params.payload, headers.messageSignature);
     };
     return Wrapper;
