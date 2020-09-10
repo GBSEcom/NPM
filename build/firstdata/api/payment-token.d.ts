@@ -31,11 +31,11 @@ interface IWrapper {
      */
     deletePaymentToken(params: DeletePaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
     /**
-     * Use this to get details of a payment token.
-     * @summary Get details of a payment token.
-     * @param {GetPaymentTokenParams} params
-     * @throws {RequiredError}
-     */
+    * Use this to get details of a payment token.
+    * @summary Get details of a payment token.
+    * @param {GetPaymentTokenParams} params
+    * @throws {RequiredError}
+    */
     getPaymentTokenDetails(params: GetPaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
 }
 declare class Wrapper extends BaseApi<IGenerated> implements IWrapper {

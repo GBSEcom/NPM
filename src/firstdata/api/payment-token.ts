@@ -26,6 +26,7 @@ type GetPaymentTokenParams =
   ApiField<"tokenId"> &
   ApiField<"storeId">;
 
+
 interface IWrapper {
     /**
      * Use this to create a payment token from a payment card.
@@ -52,14 +53,13 @@ interface IWrapper {
      */
     deletePaymentToken(params: DeletePaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
 
-    /**
+     /**
      * Use this to get details of a payment token.
      * @summary Get details of a payment token.
      * @param {GetPaymentTokenParams} params
      * @throws {RequiredError}
      */
     getPaymentTokenDetails(params: GetPaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
-
 }
 
 class Wrapper extends BaseApi<IGenerated> implements IWrapper {
@@ -126,7 +126,6 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
       params.storeId || this.context.storeId,
     );
   }
-
 }
 
 // EXPORTS

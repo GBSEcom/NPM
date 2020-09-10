@@ -24,7 +24,7 @@ var Wrapper = /** @class */ (function (_super) {
         var headers = this.context.genHeaders(params.payload);
         return this.client.verifyCard(headers.contentType, headers.clientRequestId, headers.apiKey, headers.timestamp, params.payload, headers.messageSignature, params.region || this.context.region);
     };
-    Wrapper.prototype.verifyAccount = function (params) {
+    Wrapper.prototype.verifyAcct = function (params) {
         var headers = this.context.genHeaders(params.payload);
         return this.client.verifyAccount(headers.contentType, headers.clientRequestId, headers.apiKey, headers.timestamp, params.payload, headers.messageSignature, params.region || this.context.region);
     };

@@ -38,7 +38,7 @@ class Wrapper extends BaseApi<IGenerated> implements IWrapper {
     );
   }
 
-  public verifyAccount(params: VerifyAcctParams): AxiosPromise<TransactionResponse> {
+  public verifyAcct(params: VerifyAcctParams): AxiosPromise<TransactionResponse> {
     const headers = this.context.genHeaders(params.payload);
     return this.client.verifyAccount(
       headers.contentType,

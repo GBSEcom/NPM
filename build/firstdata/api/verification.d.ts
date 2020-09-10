@@ -17,7 +17,7 @@ interface IWrapper {
 declare class Wrapper extends BaseApi<IGenerated> implements IWrapper {
     constructor(context: IContext);
     verifyCard(params: VerifyCardParams): AxiosPromise<TransactionResponse>;
-    verifyAccount(params: VerifyAcctParams): AxiosPromise<TransactionResponse>;
+    verifyAcct(params: VerifyAcctParams): AxiosPromise<TransactionResponse>;
 }
 export { IWrapper as IVerificationApi };
 export { Wrapper as VerificationApi };
