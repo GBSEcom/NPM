@@ -12,6 +12,7 @@ interface ICredentials {
 interface IHeaders {
   apiKey: string;
   contentType: "application/json";
+  userAgentId: string;
   clientRequestId: string;
   timestamp: number;
   messageSignature: string;
@@ -37,6 +38,8 @@ interface IContext extends IConfiguration {
 
 const CONTENT_TYPE = "application/json";
 
+const USER_AGENT_ID = "IPG-SDK/21.1/npm";
+
 type SupplierFn<T> = () => T;
 
 const genClientRequestId: SupplierFn<string> = uuidv4;
@@ -50,6 +53,7 @@ const genMsgSignature = (secret: string, data: string): string =>
 const genHeaders = (creds: ICredentials, payload?: unknown): IHeaders => {
   const apiKey = creds.apiKey;
   const contentType = CONTENT_TYPE;
+  const userAgentId = USER_AGENT_ID;
   const clientRequestId = genClientRequestId();
   const timestamp = genTimestamp();
 
@@ -66,7 +70,7 @@ const genHeaders = (creds: ICredentials, payload?: unknown): IHeaders => {
     data
   );
 
-  return {apiKey, contentType, clientRequestId, timestamp, messageSignature};
+  return {apiKey, contentType, userAgentId, clientRequestId, timestamp, messageSignature};
 };
 
 class Context implements IContext {

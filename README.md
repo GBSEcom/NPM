@@ -3,8 +3,8 @@
 FirstApiSdk - Typescript client for FirstApiSDK
 
 Payment Gateway API Specification.
-- API version: 6.14.0
-- Package version: 1.9.0
+- API version: 2.21.0
+- Package version: 1.10.0
 
 ## Installation
 
@@ -105,8 +105,10 @@ All URIs are relative to *https://cert.api.firstdata.com/gateway*
 Interface | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *IAuthenticationApi* | **getAccessToken** | **POST** /v2/authentication/access-tokens | Generate an access token for user authentication.
-*ICardInfoLookupApi* | **cardInfoLookup** | **POST** /v2/card-information | Card information lookUp
-*ICardVerificationApi* | **verifyCard** | **POST** /v2/card-verification | Verify a payment card.
+*IInformationLookupApi* | **cardInfoLookup** | **POST** /v2/card-information | Card information lookUp
+*IInformationLookupApi* | **lookUpAccount** | **POST** /v2/account-information | Account information lookUp
+*IVerificationApi* | **verifyCard** | **POST** /v2/card-verification | Verify a payment card.
+*IVerificationApi* | **verifyAccount** | **POST** /v2/account-verification | Verify a payment account.
 *ICurrencyConversionApi* | **getExchangeRate** | **POST** /v2/exchange-rates | Generate dynamic currency conversion transactions
 *IFraudDetectApi* | **scoreOnly** | **POST** /v2/fraud/score-only | Score a transaction for fraud.
 *IFraudDetectApi* | **clientRegistration** | **POST** /v2/fraud/client-registration | Client Registration for fraud detect.
@@ -123,6 +125,8 @@ Interface | Method | HTTP request | Description
 *IPaymentSchedulesApi* | **updatePaymentSchedule** | **PATCH** /v2/payment-schedules/{order-id} | Update a gateway payment schedule.
 *IPaymentTokenApi* | **createPaymentToken** | **POST** /v2/payment-tokens | Create a payment token from a payment card.
 *IPaymentTokenApi* | **deletePaymentToken** | **DELETE** /v2/payment-tokens/{token-id} | Delete a payment token.
+*IPaymentTokenApi* | **getPaymentTokenDetails** | **GET** /v2/payment-tokens/{token-id} | Get details of an existing token.
+*IPaymentTokenApi* | **updatePaymentToken** | **PATCH** /v2/payment-tokens | Update payment token information.
 *IPaymentUrlApi* | **createPaymentUrl** | **POST** /v2/payment-url | Create a payment URL.
 *IPaymentUrlApi* | **deletePaymentUrl** | **DELETE** /v2/payment-url | Delete a payment URL.
 *IPaymentUrlApi* | **paymentUrlDetail** | **GET** /v2/payment-url | Retrive the state of a payment URL.
@@ -164,8 +168,8 @@ class Context implements IContext {
 ```typescript
 interface IClientFactory {
   authenticationApi(): IAuthenticationApi;
-  cardInfoLookupApi(): ICardInfoLookupApi;
-  cardVerificationApi(): ICardVerificationApi;
+  cardInfoLookupApi(): IInformationLookupApi;
+  cardVerificationApi(): IVerificationApi;
   currencyConversionApi(): ICurrencyConversionApi;
   fraudDetectApi(): IFraudDetectApi;
   orderApi(): IOrderApi;
@@ -180,11 +184,11 @@ interface IClientFactory {
 
 ```typescript
 interface IAuthenticationApi {
-  getAccessToken(): AxiosPromise<AccessTokenResponse>;
+  getAccessToken(params: GetAccessTokenParams): AxiosPromise<AccessTokenResponse>;
 }
 ```
 
-### ICardInfoLookupApi
+### IInformationLookupApi
 
 ```typescript
 type CardInfoLookupParams = {
@@ -192,12 +196,18 @@ type CardInfoLookupParams = {
   payload: CardInfoLookupRequest;
 };
 
-interface ICardInfoLookupApi {
+type AcctInfoLookupParams = {
+  region?: string;
+  payload: AccountInfoLookupRequest>
+};
+
+interface IInformationLookupApi {
   cardInfoLookup(params: CardInfoLookupParams): AxiosPromise<CardInfoLookupResponse>;
+  acctInfoLookup(params: AcctInfoLookupParams): AxiosPromise<CardInfoLookupResponse>
 }
 ```
 
-### ICardVerificationApi
+### IVerificationApi
 
 ```typescript
 type VerifyCardParams = {
@@ -205,8 +215,14 @@ type VerifyCardParams = {
   payload: CardVerificationRequest;
 };
 
-interface ICardVerificationApi {
+type VerifyAccountParams = {
+  region?: string;
+  payload: AccountVerificationRequest;
+}
+
+interface IVerificationApi {
   verifyCard(params: VerifyCardParams): AxiosPromise<TransactionResponse>;
+  verifyAcct(params: VerifyAcctParams): AxiosPromise<TransactionResponse>
 }
 ```
 
@@ -312,9 +328,22 @@ type DeletePaymentTokenParams =
     storeId?: string;
   };
 
+  type GetPaymentTokenDetailsParams =
+  PaymentTokenParams & {
+    tokenId: string;
+    storeId?: string;
+  };
+
+  type UpdatePaymentTokenParams =
+  PaymentTokenParams & {
+    payload: PaymentCardPaymentTokenUpdateRequest
+  };
+
 interface IPaymentTokenApi {
   createPaymentToken(params: CreatePaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
   deletePaymentToken(params: DeletePaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
+  getPaymentTokenDetails(params: GetPaymentTokenParams): AxiosPromise<PaymentTokenizationResponse>;
+  updatePaymentToken(params: UpdatePaymentTokenParams): AxiosPromise<PaymentTokenUpdateResponse>;
 }
 ```
 

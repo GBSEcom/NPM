@@ -7,6 +7,7 @@ interface ICredentials {
 interface IHeaders {
     apiKey: string;
     contentType: "application/json";
+    userAgentId: string;
     clientRequestId: string;
     timestamp: number;
     messageSignature: string;

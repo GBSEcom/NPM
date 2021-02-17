@@ -6,6 +6,7 @@ var crypto_js_1 = require("crypto-js");
 var Base64 = require("crypto-js/enc-base64");
 var factory_1 = require("./factory");
 var CONTENT_TYPE = "application/json";
+var USER_AGENT_ID = "IPG-SDK/21.1/npm";
 var genClientRequestId = uuidv4;
 var genTimestamp = function () {
     return new Date().getTime();
@@ -16,6 +17,7 @@ var genMsgSignature = function (secret, data) {
 var genHeaders = function (creds, payload) {
     var apiKey = creds.apiKey;
     var contentType = CONTENT_TYPE;
+    var userAgentId = USER_AGENT_ID;
     var clientRequestId = genClientRequestId();
     var timestamp = genTimestamp();
     var data = apiKey +
@@ -25,7 +27,7 @@ var genHeaders = function (creds, payload) {
         data = data.concat(JSON.stringify(payload));
     }
     var messageSignature = genMsgSignature(creds.apiSecret.toString(), data);
-    return { apiKey: apiKey, contentType: contentType, clientRequestId: clientRequestId, timestamp: timestamp, messageSignature: messageSignature };
+    return { apiKey: apiKey, contentType: contentType, userAgentId: userAgentId, clientRequestId: clientRequestId, timestamp: timestamp, messageSignature: messageSignature };
 };
 var Context = /** @class */ (function () {
     function Context(config) {
