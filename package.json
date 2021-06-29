@@ -1,7 +1,7 @@
 {
   "name": "@firstdata/first-data-gateway",
-  "version": "1.11.0",
-  "description": "TypeScript SDK to be used with First Data's IPG API (version 21.2.0). This SDK has been created and packaged to offer the easiest way to integrate your application into the First Data Gateway. This SDK gives you the ability to run transactions such as sales, preauthorizations, postauthorizations, credits, voids, and returns; transaction inquiries; setting up scheduled payments and much more.",
+  "version": "1.12.0",
+  "description": "TypeScript SDK to be used with First Data's IPG API (version 21.3.0). This SDK has been created and packaged to offer the easiest way to integrate your application into the First Data Gateway. This SDK gives you the ability to run transactions such as sales, preauthorizations, postauthorizations, credits, voids, and returns; transaction inquiries; setting up scheduled payments and much more.",
   "license": "MIT",
   "main": "build/index.js",
   "bugs": {

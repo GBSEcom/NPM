@@ -6,7 +6,7 @@ var crypto_js_1 = require("crypto-js");
 var Base64 = require("crypto-js/enc-base64");
 var factory_1 = require("./factory");
 var CONTENT_TYPE = "application/json";
-var USER_AGENT_ID = "IPG-SDK/21.1/npm";
+var USER_AGENT_ID = "IPG-SDK/21.3.0/npm";
 var genClientRequestId = uuidv4;
 var genTimestamp = function () {
     return new Date().getTime();

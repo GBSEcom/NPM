@@ -38,7 +38,7 @@ interface IContext extends IConfiguration {
 
 const CONTENT_TYPE = "application/json";
 
-const USER_AGENT_ID = "IPG-SDK/21.1/npm";
+const USER_AGENT_ID = "IPG-SDK/21.3.0/npm";
 
 type SupplierFn<T> = () => T;
 
