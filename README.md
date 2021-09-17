@@ -3,8 +3,8 @@
 FirstApiSdk - Typescript client for FirstApiSDK
 
 Payment Gateway API Specification.
-- API version: 21.3.0
-- Package version: 1.12.0
+- API version: 21.4.0
+- Package version: 1.13.0
 
 ## Installation
 

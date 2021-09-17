@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var api_1 = require("../openapi/api");
 exports.AchRecurringType = api_1.AchRecurringType;
 exports.CardFunction = api_1.CardFunction;
+exports.ManagedRedirectTransactionType = api_1.ManagedRedirectTransactionType;
 exports.PaymentMethodType = api_1.PaymentMethodType;
 exports.PaymentUrlStatus = api_1.PaymentUrlStatus;
 exports.ResponseType = api_1.ResponseType;
