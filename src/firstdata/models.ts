@@ -128,8 +128,6 @@ export {
   LodgingExtraCharges,
   Loyalty,
   ManagedRedirectPaymentMethod,
-  ManagedRedirectPaymentMethodPaymentDetails,
-  ManagedRedirectRequest, 
   ManagedRedirectResponse,
   ManagedRedirectTransactionType,
   MasterpassWalletPaymentMethod,
